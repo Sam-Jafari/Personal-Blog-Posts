@@ -6,6 +6,12 @@ By Sam Jafari
 
 ---
 
+![Diptych: on the left, a mother kneels in a warm sunlit kitchen, both hands restraining her young son who reaches toward a glowing stove burner. On the right, in a vast research lab, a male researcher kneels in the same protective posture, hand reaching into a wall-sized neural network visualization to redirect a node.](images/hero.png)
+
+*The same act, different substrate. A parent stopping a child from a hot stove. A researcher shaping a young model away from a harmful path.*
+
+---
+
 A child reaches for a hot stove.
 
 Before the hand lands, several systems are already at work. Old wiring deep in the body: fear, curiosity, pain, the reflex to look back at a parent's face. The parent's voice: *Don't touch that.* And further out, the rules, habits, and consequences of the world around them.
@@ -186,9 +192,9 @@ The future of AI alignment should look less like installing a lock and more like
 
 That is the light-bulb moment.
 
-![A young luminous sapling at the center of a circular architectural space. Around it in concentric rings: a stone planting bed, a circle of seated mentors and family figures, and on a higher gallery, silhouetted institutional figures.](images/closing-illustration.png)
+![A young oak sapling growing in dark soil at the center of a quiet greenhouse-cathedral. Soft golden light from above. In the soft-focused background, distant figures go about quiet work — a gardener, a person reading, a curator walking past.](images/closing.png)
 
-*A mind, raised inside concentric layers of attention. The inner ring is family. The middle ring is teaching. The outer ring is the institutions that surround it all.*
+*A young thing growing inside a quiet architecture of care. The room is built to make the growing possible.*
 
 ---
 
