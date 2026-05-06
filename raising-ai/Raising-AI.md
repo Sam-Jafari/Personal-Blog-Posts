@@ -56,7 +56,7 @@ Train a powerful model on the full mess of human culture. Add a few filters. Wra
 
 That is not development. That is cleanup.
 
-I think about this a lot, because I build telemetry systems for vehicles where layered safety isn't a metaphor. It's the architecture. Sensors at the edge, ML in the middle, human review at the top. No layer alone is safe. The whole stack is.
+I think about this a lot, because two threads in my own work keep colliding here. Spending serious time with AI in safety-relevant automotive workloads, where the cost of a wrong answer isn't theoretical. And a long-running engagement with the biology and psychology of human development, from inherited wiring through family and school into adulthood. The argument I'm making is that those two worlds are more similar than people credit.
 
 > Human morality is not one layer. AI alignment should not be one layer either.
 

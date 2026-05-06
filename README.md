@@ -4,9 +4,9 @@ Source-of-truth repository for blog posts authored by Sam Jafari. One folder per
 
 ## Posts
 
-| Post | Folder | Status |
+| Post | Folder | Published |
 |---|---|---|
-| Raising AI: What Human Moral Development Can Teach Us About AI Safety and Alignment | [`raising-ai/`](raising-ai/) | Draft |
+| Raising AI: What Human Moral Development Can Teach Us About AI Safety and Alignment | [`raising-ai/`](raising-ai/) | [Medium](https://medium.com/@samjafari/raising-ai-what-human-moral-development-can-teach-us-about-ai-safety-and-alignment-f7b0d270b14f) |
 
 ## Publishing to Medium
 
