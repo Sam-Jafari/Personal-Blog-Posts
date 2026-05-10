@@ -7,7 +7,7 @@ Source-of-truth repository for blog posts authored by Sam Jafari. One folder per
 | Post | Folder | Published |
 |---|---|---|
 | Raising AI: What Human Moral Development Can Teach Us About AI Safety and Alignment | [`raising-ai/`](raising-ai/) | [Medium](https://medium.com/@samjafari/raising-ai-what-human-moral-development-can-teach-us-about-ai-safety-and-alignment-f7b0d270b14f) |
-| The Next CarPlay Will Be Your AI Agent | [`next-carplay-ai-agent/`](next-carplay-ai-agent/) | [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/next-carplay-ai-agent/) |
+| The Next CarPlay Will Be Your Personal AI Agent | [`next-carplay-ai-agent/`](next-carplay-ai-agent/) | [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/next-carplay-ai-agent/) |
 
 ## Publishing to Medium
 

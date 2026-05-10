@@ -1,6 +1,6 @@
-# The Next CarPlay Will Be Your AI Agent
+# The Next CarPlay Will Be Your Personal AI Agent
 
-*Personalization isn't settings memory. The next leap is your agent walking into the vehicle with you.*
+*Personalization isn't settings memory. The next leap is your personal agent walking into the vehicle with you.*
 
 By Sam Jafari
 
