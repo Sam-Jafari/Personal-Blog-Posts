@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Age of Specification: How Software Development Turned Inside Out</title>
+<meta name="description" content="The Age of Specification: How Software Development Turned Inside Out.">
+<meta property="og:title" content="The Age of Specification: How Software Development Turned Inside Out">
+<meta property="og:description" content="The Age of Specification: How Software Development Turned Inside Out">
+<meta property="og:image" content="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-age-of-specification/images/image-01.jpg">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --text: #292929;
+    --muted: #6b6b6b;
+    --rule: #e6e6e6;
+    --accent: #1a1a1a;
+    --bg: #ffffff;
+  }
+  html, body { background: var(--bg); margin: 0; padding: 0; }
+  body {
+    font-family: 'Charter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    color: var(--text);
+    max-width: 720px;
+    margin: 60px auto 120px;
+    padding: 0 24px;
+    line-height: 1.65;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.article-head { margin-bottom: 40px; }
+  h1 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 44px; line-height: 1.12; letter-spacing: -0.025em;
+    font-weight: 700; margin: 0 0 16px; color: var(--accent);
+  }
+  .subtitle {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 18px; line-height: 1.35; color: var(--muted);
+    font-weight: 400; margin: 0; font-style: italic;
+  }
+  .byline {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 24px; letter-spacing: 0.02em;
+  }
+  h2 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 28px; line-height: 1.25; letter-spacing: -0.015em;
+    font-weight: 700; margin: 44px 0 14px; color: var(--accent);
+  }
+  h3 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--accent);
+  }
+  p { margin: 0 0 18px; font-size: 19px; line-height: 1.65; }
+  p em { font-style: italic; }
+  ul, ol { margin: 0 0 18px; padding-left: 28px; }
+  li { margin-bottom: 8px; line-height: 1.65; }
+  figure { margin: 36px 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 2px; }
+  figcaption {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.5;
+    text-align: center; font-style: italic;
+  }
+  blockquote {
+    border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 28px 0;
+    font-size: 22px; font-style: italic; color: var(--accent); line-height: 1.4;
+    font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
+  }
+  blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  hr.section-rule {
+    border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
+  }
+  .ack {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); font-style: italic; text-align: center;
+    margin: 32px auto 0; max-width: 600px; line-height: 1.55;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 18px; padding: 0 18px; margin-top: 36px; }
+    h1 { font-size: 34px; } .subtitle { font-size: 16px; }
+    h2 { font-size: 24px; margin-top: 36px; } figure { margin: 28px 0; }
+    blockquote { font-size: 20px; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="article-head">
+  <h1>The Age of Specification: How Software Development Turned Inside Out</h1>
+  <p class="subtitle">Originally published on Medium, November 18, 2025</p>
+  <p class="byline">By Sam Jafari</p>
+</header>
+
+<p>(Follow-up to “The Garage Is Back”)</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-age-of-specification/images/image-01.jpg" alt="The Age of Specification: How Software Development Turned Inside Out">
+</figure>
+<p>A few weeks ago I wrote about the return of the garage. One person, one idea, one machine, and enough conviction to actually build something. That article came out of a personal shift I felt happening in real time. But this new shift has been even more dramatic, and it’s hitting the very core of what it means to “build software.”</p>
+<p>It started one night with a simple problem. I had an idea for a tool I wanted to build. A few years ago, even with all my background, I would have needed at least a small team to get anything meaningful off the ground. A frontend person to shape what users see. A backend specialist to stitch data together. Someone to handle infra. Someone to make sure it all didn’t collapse under its own weight. Everyone with their own skill set, their own stack preferences, and their own availability.</p>
+<p>This time I opened Cursor, dropped my rough notes and architecture sketches into it, and watched the plan unfold. The code quality wasn’t just passable. It was solid. A year ago that wasn’t true. A year ago you still had to fight the AI to keep it from hallucinating imports or forgetting how its own functions worked. Now it can build something coherent if you give it a clear description. And that is the key. Code is no longer the bottleneck. The bottleneck is clarity.</p>
+<h2>The Real Skill Has Shifted</h2>
+<p>For decades, the currency of software development was fluency in a specific language. Python or JavaScript or Go or C++. People identified themselves by the syntax they were comfortable with. Teams were built around these identities. Job descriptions read like grocery lists of frameworks and libraries. If you couldn’t write the for loops and the if statements cleanly enough, you were out of the game.</p>
+<p>That world is fading. Not disappearing, but fading.</p>
+<p>The best analogy lives outside software. Before computers, solving a differential equation required learning how to actually solve a differential equation. You needed the technique, the pattern recognition, the algebraic gymnastics. If you couldn’t do those steps by hand, nothing moved forward. Later, calculators took over the mechanical work. Engineers stopped needing to remember the step-by-step solution. What mattered was knowing when to apply the equation, what it meant, and how the result shaped the real-world problem.</p>
+<p>Software is entering that same territory.</p>
+<p>Line-by-line coding still matters for understanding. It is still the best way to see where the AI might trip, because it does trip. But writing code purely as manual labor is no longer the defining skill. Now the defining skill is specification. The ability to describe what you want a system to do, in precise enough terms that an AI agent can build it.</p>
+<h2>A Builder’s Job Is Becoming Architectural</h2>
+<p>Most people underestimate how much of software development is invisible. It is not typing commands into a terminal. It is deciding what the system is supposed to do. Which components exist. How they talk to each other. Where the data flows. What belongs on the client. What belongs on the server. Which pieces can be reused and which need to be custom.</p>
+<p>This is architecture, not syntax.</p>
+<p>A lot of people struggle with this part. You see it quickly when someone tries to use an AI coding agent without understanding the underlying structure. They ask the system to “build the whole app,” and what they get back is a polite mess. It resembles software the way a cake drawn by a child resembles a cake. The AI isn’t wrong. It just doesn’t have enough direction.</p>
+<p>When you know the architecture, everything changes. A clear front-end layout forces clarity about the backend. A good schema forces clarity about the logic. A good flowchart forces clarity about the data boundaries. Once you know these, you can break the problem down into components, and the AI can assemble each piece with far fewer mistakes.</p>
+<p>Good builders today need two things:</p>
+<ol>
+  <li>A clear, detailed specification of what they want to build.</li>
+  <li>A working understanding of modern architecture patterns and how systems fit together.</li>
+</ol>
+<p>Everything else can be delegated.</p>
+<h2>The New Loop: Brain Dump → Architecture → Specification → Build</h2>
+<p>When I start a project, I don’t ask the AI to code anything at first. I open a blank note and write exactly what I would tell a human teammate who knows nothing about the idea. I explain the story. The philosophy. The purpose. The user’s flow. The problems I’m trying to solve. I don’t hold back on details or caveats.</p>
+<p>Only after that do I break the idea into major pieces. The UI. The API. The data model. The logic. The state. The flow. These aren’t just checkboxes. They force me to confront missing pieces early.</p>
+<p>Then I prepare a proper specification prompt, often hundreds of lines long, combining the brain dump with the architecture. That prompt becomes the input to Cursor or Claude Code. The result is usually close to what I imagined. Not perfect, but close. Close enough that the next iteration becomes refinement instead of rescue work.</p>
+<p>The “build” step isn’t coding anymore. It’s instructing. Reviewing. Correcting. Iterating.</p>
+<p>It feels more like directing a team of tireless junior developers than writing the code yourself. You guide them. They draft. You inspect. They refine. You keep the vision intact.</p>
+<h2>A Moment of Transition</h2>
+<p>We are still early. You won’t build the next Google with an AI agent today. Heavy distributed systems, massive scale, deep custom logic, real-time workloads, complex security — all of that still demands human expertise. But the phase I care about most, the early stage, the idea-to-prototype stage, has been transformed.</p>
+<p>One person with clear architectural thinking and a well-written specification can now do what used to require a small team.</p>
+<p>This doesn’t eliminate the value of engineers. It elevates the ones who can think in systems. It frees up those who can design clean abstractions. It rewards clarity, not clerical labor. And for people who were locked out of building because they couldn’t write perfect code, a door has opened.</p>
+<h2>The Skill of the Next Decade</h2>
+<p>If I had to bet on one skill for the next decade, it wouldn’t be a programming language. It would be architectural literacy.</p>
+<p>Knowing how applications fit together. Knowing how data moves. Knowing how to assemble components that complement each other. Knowing how to describe a system clearly enough that another intelligence, human or artificial, can build it.</p>
+<p>That is the new leverage.</p>
+<p>And the people who combine that architectural sense with detailed, thoughtful specification will build faster and better than teams ten times their size. Not because they are better coders. Because they know what they want to build and can explain it with precision.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-age-of-specification/images/image-02.jpg" alt="The Age of Specification: How Software Development Turned Inside Out">
+</figure>
+<h2>The Quiet Revolution</h2>
+<p>A few years from now we’ll look back at this shift and realize it was obvious. Of course the labor of coding would become automated. Of course the real bottleneck would be understanding. Of course architecture would be the differentiator. Of course clarity would be the new currency.</p>
+<p>We just weren’t ready to see it yet.</p>
+<p>Right now, we are living through the moment when software development stopped being a craft defined by syntax and became a craft defined by thinking. What used to be a matter of typing has become a matter of describing. The builder’s job has turned inside out.</p>
+<p>And this time, the garage isn’t just back.
+It has blueprints taped to the walls.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-age-of-specification/images/image-03.jpg" alt="The Age of Specification: How Software Development Turned Inside Out">
+</figure>
+
+<hr class="section-rule">
+
+<p class="ack">Originally published on <a href="https://medium.com/@samjafari/the-age-of-specification-how-software-development-turned-inside-out-68edc24ae467">Medium</a>, November 18, 2025.</p>
+
+</body>
+</html>

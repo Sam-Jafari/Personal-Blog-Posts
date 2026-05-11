@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Data Stack Behind My AI Health Copilot</title>
+<meta name="description" content="The Data Stack Behind My AI Health Copilot.">
+<meta property="og:title" content="The Data Stack Behind My AI Health Copilot">
+<meta property="og:description" content="The Data Stack Behind My AI Health Copilot">
+<meta property="og:image" content="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-data-stack-behind-my-ai-health-copilot/images/image-01.jpg">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --text: #292929;
+    --muted: #6b6b6b;
+    --rule: #e6e6e6;
+    --accent: #1a1a1a;
+    --bg: #ffffff;
+  }
+  html, body { background: var(--bg); margin: 0; padding: 0; }
+  body {
+    font-family: 'Charter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    color: var(--text);
+    max-width: 720px;
+    margin: 60px auto 120px;
+    padding: 0 24px;
+    line-height: 1.65;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.article-head { margin-bottom: 40px; }
+  h1 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 44px; line-height: 1.12; letter-spacing: -0.025em;
+    font-weight: 700; margin: 0 0 16px; color: var(--accent);
+  }
+  .subtitle {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 18px; line-height: 1.35; color: var(--muted);
+    font-weight: 400; margin: 0; font-style: italic;
+  }
+  .byline {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 24px; letter-spacing: 0.02em;
+  }
+  h2 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 28px; line-height: 1.25; letter-spacing: -0.015em;
+    font-weight: 700; margin: 44px 0 14px; color: var(--accent);
+  }
+  h3 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--accent);
+  }
+  p { margin: 0 0 18px; font-size: 19px; line-height: 1.65; }
+  p em { font-style: italic; }
+  ul, ol { margin: 0 0 18px; padding-left: 28px; }
+  li { margin-bottom: 8px; line-height: 1.65; }
+  figure { margin: 36px 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 2px; }
+  figcaption {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.5;
+    text-align: center; font-style: italic;
+  }
+  blockquote {
+    border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 28px 0;
+    font-size: 22px; font-style: italic; color: var(--accent); line-height: 1.4;
+    font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
+  }
+  blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  hr.section-rule {
+    border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
+  }
+  .ack {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); font-style: italic; text-align: center;
+    margin: 32px auto 0; max-width: 600px; line-height: 1.55;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 18px; padding: 0 18px; margin-top: 36px; }
+    h1 { font-size: 34px; } .subtitle { font-size: 16px; }
+    h2 { font-size: 24px; margin-top: 36px; } figure { margin: 28px 0; }
+    blockquote { font-size: 20px; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="article-head">
+  <h1>The Data Stack Behind My AI Health Copilot</h1>
+  <p class="subtitle">Originally published on Medium, January 26, 2026</p>
+  <p class="byline">By Sam Jafari</p>
+</header>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-data-stack-behind-my-ai-health-copilot/images/image-01.jpg" alt="The Data Stack Behind My AI Health Copilot">
+</figure>
+<h2>If you want AI to be genuinely useful for health, you need more than vibes. You need real measurements, captured consistently, and organized in a way the AI can actually reason over.</h2>
+<p>Before ChatGPT (and other tools) started adding native health connectors, I built a simple system: collect high signal health data, keep it structured, and convert it into clean plain text that an AI can read reliably.</p>
+<p>Right now, my personal project has roughly 560 measurements pulled from labs, scans, wearables, medical records, and a small amount of manual input.</p>
+<p>This post is a practical checklist. No personal story. Just the stack and the workflow.</p>
+<h2>What you are trying to accomplish</h2>
+<p>AI becomes valuable when it can answer three things with evidence:</p>
+<ol>
+  <li>Where am I right now (baseline)</li>
+  <li>What is changing (trend)</li>
+  <li>What caused the change (training, sleep, diet pattern, meds, supplements, stress, illness)</li>
+</ol>
+<p>That only works if your data is:</p>
+<p>• timestamped
+• unit consistent
+• repeatable over time
+• stored in a place you can export from</p>
+<h2>The tests and data sources I use</h2>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-data-stack-behind-my-ai-health-copilot/images/image-02.jpg" alt="The Data Stack Behind My AI Health Copilot">
+</figure>
+<h2>1. Expanded bloodwork: Function Health</h2>
+<p>A typical primary care lab panel might include around a 25 common markers. Function Health is designed as a broader panel with 100 plus tests and states it provides 160 plus lab tests annually with testing twice per year (plus on-demand options)</p>
+<p>What it gives you
+• large blood marker coverage
+• repeatability, so you can compare over time
+• a clean structure for exporting and organizing</p>
+<p>Link
+https://www.functionhealth.com/what-we-test</p>
+<h2>2. Genetics: Sequencing.com</h2>
+<p>I started with legacy 23andMe data. Today, I generally recommend deeper sequencing so you can reuse it for more analysis over the years.</p>
+<p>What it gives you
+• a one time dataset you can use repeatedly
+• variants that can inform risk, sensitivities, and traits
+• helpful context when you interpret labs and symptoms</p>
+<p>Link
+https://get.sequencing.com/shop-all-bundles/</p>
+<h2>3. Epigenetics: TruDiagnostic</h2>
+<p>This category adds “biological age style” outputs plus a wider biomarker view, with comparisons relative to population percentiles.</p>
+<p>What it gives you
+• a different lens on aging and pace of change
+• biomarker percentiles that help you see where you sit versus broader population distributions
+• another anchor point to track progress over time</p>
+<p>Link
+https://shop.trudiagnostic.com/products/truage-truhealth</p>
+<h2>4. DEXA scan: BodySpec</h2>
+<p>DEXA is my anchor for body composition and bone metrics. Home scales are useful, but DEXA is what I trust for the baseline.</p>
+<p>What it gives you
+• body fat and lean mass breakdown
+• visceral fat estimate
+• bone density metrics</p>
+<p>Link
+https://www.bodyspec.com/blog/post/what_are_dexa_scans</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/the-data-stack-behind-my-ai-health-copilot/images/image-03.jpg" alt="The Data Stack Behind My AI Health Copilot">
+</figure>
+<h2>5. Daily measurement: Withings + Apple Watch</h2>
+<p>This is the everyday telemetry layer. It is not “perfect truth,” but it is consistent, and consistency is what makes trends visible.</p>
+<h3>Withings Body Scan scale</h3>
+<p>This is my daily body composition and cardiovascular style snapshot device.</p>
+<p>If you are going to buy it, I would personally consider waiting for Body Scan 2, since this category is a real investment at around the $500 level and you want the most current hardware.</p>
+<p>Body Scan 2 page
+https://www.withings.com/us/en/landing/body-scan-2</p>
+<h3>Withings Sleep tracker</h3>
+<p>This gives you passive sleep tracking at home without wearing anything overnight.</p>
+<p>What it gives you
+• sleep duration and sleep quality type metrics
+• nightly heart rate trends
+• consistency signals you can compare with training, stress, and food</p>
+<h3>Withings blood pressure device (BPM Vision)</h3>
+<p>The specific BP device I use is Withings BPM Vision. I recommend it over simpler cuffs because it is a more advanced product in their lineup.</p>
+<p>Withings also has other useful devices in this ecosystem. I do not use them yet, but I may add more over time.</p>
+<p>Withings site
+https://www.withings.com/us/en/bpm-vision</p>
+<h3>Apple Watch (workouts and activity)</h3>
+<p>Apple Watch is my main source for workout capture and activity context.</p>
+<p>What it gives you
+• workout sessions and training frequency
+• heart rate trends during workouts
+• activity trends over weeks and months</p>
+<h2>6. Medical history via Apple Health</h2>
+<p>This is how I centralize my clinical record trail.</p>
+<p>I connect provider apps to Apple Health, for example Stanford Health, One Medical, and others, so it pulls medical history, medications, and prescriptions into one place.</p>
+<p>Apple Health
+https://www.apple.com/ios/health/</p>
+<h2>7. Historical labs from Labcorp and Quest</h2>
+<p>A lot of older lab data sits in portals. If you want AI to be useful, you need your history, not just the last test.</p>
+<p>What I do
+• download PDFs from portals
+• extract the markers into structured text
+• merge them into a single chronological dataset</p>
+<p>Quest
+https://myquest.questdiagnostics.com/</p>
+<p>Labcorp
+https://www.labcorp.com/patients</p>
+<h2>8. Skin assessment via photo analysis (Haut.AI)</h2>
+<p>For skin tracking, I use photo based assessment as an additional consistent input over time.</p>
+<p>Link
+https://haut.ai/</p>
+<h2>Manual inputs that are one time setup, then update only on change</h2>
+<p>This is important. You do not need to manually log everything forever. You just need stable context that you update when it changes.</p>
+<h2>9. Workout routine and training structure</h2>
+<p>I enter my current routine once: split, goals, typical weekly schedule, and sport activities. Then I only update it when I change the program.</p>
+<h2>10. Supplements, peptides, prescriptions, and over the counter meds</h2>
+<p>I enter the list once with dose and schedule. Then I only update when something changes.</p>
+<p>Minimum fields that matter
+• name
+• dose
+• schedule
+• start date
+• stop date (when applicable)
+• reason for adding or stopping</p>
+<h2>11. Eating pattern, cuisines, and constraints</h2>
+<p>This is not calorie tracking. It is pattern tracking.</p>
+<p>I enter once
+• typical eating pattern
+• cuisines and food preferences
+• constraints and sensitivities
+• alcohol frequency
+• anything I am deliberately avoiding or emphasizing</p>
+<p>Then I update only when the pattern changes.</p>
+<h2>The workflow that turns raw data into AI ready context</h2>
+<h2>Step 1. Export everything you can</h2>
+<p>Prefer structured exports when available. If not, PDFs are fine. Just be consistent.</p>
+<h2>Step 2. Normalize to a simple schema</h2>
+<p>Every measurement becomes a row with:</p>
+<p>• marker name
+• value
+• unit
+• date and time
+• source (device, lab, scan)
+• context tags when relevant (fasted, sick, post workout, new medication)</p>
+<h2>Step 3. Convert to plain text summaries</h2>
+<p>AI works best when you give it clean text that is easy to parse.</p>
+<p>I keep a plain text “health brief” that includes:
+• my profile and baseline
+• latest key markers with dates and units
+• trends over time
+• current training plan and diet pattern (only updated when changed)
+• current meds and supplements (only updated when changed)
+• current issues, hypotheses, and what I am testing next</p>
+<h2>Step 4. Keep the project context updated</h2>
+<p>Numbers alone are not enough. AI also needs your storyline.</p>
+<p>When something important happens, new diagnosis, medication change, confirmed root cause, a resolved symptom, I update my project instructions or memory so the AI stops guessing and starts recalling.</p>
+<h2>A simple starter plan most people can follow</h2>
+<ol>
+  <li>Choose one broad lab source and do it twice per year.</li>
+  <li>Add DEXA occasionally for body composition and bone baseline.</li>
+  <li>Add daily basics: weight, blood pressure, sleep, activity.</li>
+  <li>Export old labs from portals and centralize them.</li>
+  <li>Enter your routine once: training, meds and supplements, food pattern. Update only on change.</li>
+  <li>Once a month, refresh your plain text health brief.</li>
+</ol>
+<p>If you do only that, AI can become dramatically more specific and useful, because it finally has the inputs needed to reason about your real baseline and your real trends.</p>
+<p>Related Post: Owning My Health Data, With AI as Health Copilot</p>
+
+<hr class="section-rule">
+
+<p class="ack">Originally published on <a href="https://medium.com/@samjafari/the-data-stack-behind-my-ai-health-copilot-2e309ee8954a">Medium</a>, January 26, 2026.</p>
+
+</body>
+</html>
