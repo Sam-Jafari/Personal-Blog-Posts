@@ -6,10 +6,6 @@ By Sam Jafari
 
 ---
 
-Amir highlighted
-
-Amir highlighted
-
 ![](images/image-01.jpg)
 
 Most people give AI their lab results. I gave it my psychology too — alongside blood work, genetics, epigenetics, wearables, and supplements. The system gets smarter with every conversation. Here is how it works and how to build your own.
