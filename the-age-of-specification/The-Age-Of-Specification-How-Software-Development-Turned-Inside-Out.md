@@ -6,7 +6,7 @@ By Sam Jafari
 
 ---
 
-(Follow-up to “The Garage Is Back”)
+*(Follow-up to “The Garage Is Back”)*
 
 ![](images/image-01.jpg)
 
@@ -85,8 +85,8 @@ We just weren’t ready to see it yet.
 
 Right now, we are living through the moment when software development stopped being a craft defined by syntax and became a craft defined by thinking. What used to be a matter of typing has become a matter of describing. The builder’s job has turned inside out.
 
-And this time, the garage isn’t just back.
-It has blueprints taped to the walls.
+And this time, the garage isn’t just back.  
+ It has blueprints taped to the walls.
 
 ![](images/image-03.jpg)
 

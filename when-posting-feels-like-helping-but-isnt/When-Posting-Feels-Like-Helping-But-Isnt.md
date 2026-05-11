@@ -84,7 +84,7 @@ Social platforms don’t just consume attention. They convert moral energy into 
 
 Before posting or reposting, ask one simple thing:
 
-Does this protect someone, fund someone credible, change a real policy lever, or strengthen reliable information flow?
+**Does this protect someone, fund someone credible, change a real policy lever, or strengthen reliable information flow?**
 
 If the answer is no, the post is probably helping you cope, not helping Iran.
 
@@ -129,8 +129,8 @@ This isn’t disengagement. It’s sustainability.
 
 I previously wrote a separate piece on using AI to stay informed about Iran without drowning in social media and emotional manipulation. It’s designed to reduce noise, verify information, and keep your nervous system out of the algorithmic stress loop.
 
-“A Calmer Way to Follow Iran: Let an AI Agent Do the Digging, Not Your Nervous System”
-https://medium.com/@samjafari/a-calmer-way-to-follow-iran-let-an-ai-agent-do-the-digging-not-your-nervous-system-86835d3c14a1
+**“A Calmer Way to Follow Iran: Let an AI Agent Do the Digging, Not Your Nervous System”**  
+[https://medium.com/@samjafari/a-calmer-way-to-follow-iran-let-an-ai-agent-do-the-digging-not-your-nervous-system-86835d3c14a1](https://medium.com/@samjafari/a-calmer-way-to-follow-iran-let-an-ai-agent-do-the-digging-not-your-nervous-system-86835d3c14a1)
 
 This post and that one belong together. One is about information hygiene. This one is about psychological and strategic hygiene.
 

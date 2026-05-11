@@ -69,6 +69,17 @@
     font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
   }
   blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  pre {
+    background: #f6f8fa; padding: 20px 24px; border-radius: 4px; overflow-x: auto;
+    font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 14px; line-height: 1.55;
+    margin: 28px 0; color: #1a1a1a; white-space: pre-wrap; word-wrap: break-word;
+    border: 1px solid var(--rule);
+  }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  code {
+    background: #f6f8fa; padding: 2px 6px; border-radius: 3px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 16px;
+  }
   hr.section-rule {
     border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
   }
@@ -97,15 +108,15 @@
 <figure>
   <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/a-simple-playbook-to-mock-up-websites-fast-with-ai/images/image-01.jpg" alt="A simple playbook to mock up websites fast with AI">
 </figure>
-<p>This is a step‑by‑step manual to help you use Cursor with an AI coder (e.g., Claude Sonnet 4.5, or any model you pick) to turn an idea into a working web mock‑up in hours. No prior coding experience needed.</p>
+<p>This is a step‑by‑step manual to help you use <strong>Cursor</strong> with an AI coder (e.g., <strong>Claude Sonnet 4.5</strong>, or any model you pick) to turn an idea into a working web mock‑up in hours. No prior coding experience needed.</p>
 <h2>What you’ll need</h2>
 <ul>
   <li>A computer with Cursor installed.</li>
   <li>A web browser (Chrome, Edge, Safari, etc.).</li>
   <li>Optional: a phone for voice notes and any transcription app (Voice Memos + built‑in transcription, Otter, Whisper, Google Recorder, etc.).</li>
 </ul>
-<blockquote><p>Goal: a shareable static website made of HTML, CSS, and JavaScript that looks and feels like your target product. Perfect for feedback and early demos.</p></blockquote>
-<p>Goal: a shareable static website made of HTML, CSS, and JavaScript that looks and feels like your target product. Perfect for feedback and early demos.</p>
+<blockquote><p><em>Goal: a shareable </em><strong><em>static</em></strong><em> website made of </em><strong><em>HTML, CSS, and JavaScript</em></strong><em> that looks and feels like your target product. Perfect for feedback and early demos.</em></p></blockquote>
+<p><em>Goal: a shareable </em><strong><em>static</em></strong><em> website made of </em><strong><em>HTML, CSS, and JavaScript</em></strong><em> that looks and feels like your target product. Perfect for feedback and early demos.</em></p>
 <h2>Ten‑minute quick start</h2>
 <ol>
   <li>Create a folder on your desktop named after the project, e.g., coffee-booster-site.</li>
@@ -123,6 +134,11 @@
 </figure>
 <h2>1) Set up the project</h2>
 <p>Create a clean structure so the AI can see everything.</p>
+<pre><code>coffee-booster-site/
+  assets/                 # images, logos, icons, sample data
+  design-template/        # your downloaded HTML/CSS/JS starter
+  prompts/                # instruction files you’ll write and iterate on
+  README.md               # decisions, links, notes</code></pre>
 <ul>
   <li>Keep filenames simple: index.html, style.css, app.js.</li>
   <li>Prefer plain HTML/CSS/JS for mock‑ups. It’s easier for the AI to read and modify.</li>
@@ -130,7 +146,7 @@
 </ul>
 <h2>2) Capture your idea with voice</h2>
 <p>Talk like you’re explaining it to a friend. Don’t edit yourself.</p>
-<p>What to cover</p>
+<p><strong>What to cover</strong></p>
 <ul>
   <li>Who is this for and what problem it solves.</li>
   <li>Pages and sections you want (Home, Pricing, FAQ, Dashboard, Booking…).</li>
@@ -139,16 +155,16 @@
   <li>Examples you like (paste site links in your transcript).</li>
   <li>Success: what a “good first mock‑up” should show.</li>
 </ul>
-<p>Transcribe the audio with any app. Put all text into prompts/idea-raw.txt.</p>
+<p>Transcribe the audio with any app. Put all text into <code>prompts/idea-raw.txt</code>.</p>
 <figure>
   <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/a-simple-playbook-to-mock-up-websites-fast-with-ai/images/image-03.jpg" alt="A simple playbook to mock up websites fast with AI">
 </figure>
 <h2>3) Turn the raw text into a build brief</h2>
 <p>Paste your transcript into your favorite AI chat and ask:</p>
-<blockquote><p>“Rewrite this as a detailed build brief for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in /design-template/. Output as Markdown that I can save to /prompts/build-brief.md. Keep technology choices to HTML/CSS/JS. Include a numbered task plan.”</p></blockquote>
-<p>“Rewrite this as a detailed build brief for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in /design-template/. Output as Markdown that I can save to /prompts/build-brief.md. Keep technology choices to HTML/CSS/JS. Include a numbered task plan.”</p>
-<p>Save the result as prompts/build-brief.md.</p>
-<p>Why this matters A good brief acts like rails. Cursor will ask fewer questions and produce cleaner files.</p>
+<blockquote><p><em>“Rewrite this as a </em><strong><em>detailed build brief</em></strong><em> for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in </em><code><em>/design-template/</em></code><em>. Output as Markdown that I can save to </em><code><em>/prompts/build-brief.md</em></code><em>. Keep technology choices to </em><strong><em>HTML/CSS/JS</em></strong><em>. Include a numbered task plan.”</em></p></blockquote>
+<p><em>“Rewrite this as a </em><strong><em>detailed build brief</em></strong><em> for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in </em><code><em>/design-template/</em></code><em>. Output as Markdown that I can save to </em><code><em>/prompts/build-brief.md</em></code><em>. Keep technology choices to </em><strong><em>HTML/CSS/JS</em></strong><em>. Include a numbered task plan.”</em></p>
+<p>Save the result as <code>prompts/build-brief.md</code>.</p>
+<p><strong>Why this matters</strong> A good brief acts like rails. Cursor will ask fewer questions and produce cleaner files.</p>
 <figure>
   <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/a-simple-playbook-to-mock-up-websites-fast-with-ai/images/image-04.jpg" alt="A simple playbook to mock up websites fast with AI">
 </figure>
@@ -158,6 +174,12 @@
   <li>Switch to Plan mode.</li>
   <li>Paste a short instruction like:</li>
 </ol>
+<pre><code>Read /prompts/build-brief.md and review /design-template/.
+Create a plan to implement a static mock‑up using HTML, CSS, and JS only.
+Plan must include: file list, folder placement, and a step order for building.
+After showing the plan, proceed to build the files.
+Target output: index.html at project root, /assets for images, /style.css, /app.js.
+Keep CSS organized with variables and responsive rules (mobile first).</code></pre>
 <ol>
   <li>If Cursor asks clarifying questions, answer in plain language. If you don’t know, say what outcome you want (“fast to load”, “clean and modern”).</li>
   <li>Click Build. Let it create files.</li>
@@ -170,7 +192,7 @@
 </figure>
 <h2>5) Iterate with Ask/Agent modes</h2>
 <p>Talk to Cursor like an editor.</p>
-<p>Useful edit requests</p>
+<p><strong>Useful edit requests</strong></p>
 <ul>
   <li>“Replace the hero background with /assets/hero.jpg, keep text centered.”</li>
   <li>“Change primary color to #0F4C81 and add CSS variables --primary, --primary-100… then update buttons and links.”</li>
@@ -179,9 +201,24 @@
   <li>“Improve mobile layout: stack cards, increase tap targets, test on iPhone 13 width.”</li>
   <li>“Refactor styles into style.css. Keep HTML clean.”</li>
 </ul>
-<p>Tip: Point to files by path and quote the parts you want changed. Cursor reads your project.</p>
+<p><strong>Tip</strong>: Point to files by path and quote the parts you want changed. Cursor reads your project.</p>
 <h2>Example: a ready‑to‑use Master Build Prompt</h2>
 <p>Copy, paste, and adjust the bracketed sections.</p>
+<pre><code>You are building a STATIC web mock‑up (HTML, CSS, JS). No frameworks.</code></pre>
+<pre><code>Inputs:
+- Build brief: /prompts/build-brief.md
+- Design reference: /design-template/ (use structure and visual patterns, not exact text)
+Deliverables:
+1) Files at project root: index.html, style.css, app.js, /assets.
+2) Responsive layout (mobile first, then tablet, then desktop).
+3) Clear CSS variables for colors, spacing, radii, shadows, font sizes.
+4) Sections: [Navbar], [Hero], [Feature grid], [Testimonials], [Pricing], [FAQ], [Footer].
+5) Accessibility basics: semantic tags, alt text, focus states, contrast.
+Process:
+- Print a step‑by‑step PLAN with file list and tasks.
+- Ask up to 5 clarifying questions if needed.
+- Build the files, then list what changed.
+- Provide a short test checklist for me to verify.</code></pre>
 <h2>Bringing Figma into the loop (optional)</h2>
 <p>If you have Figma designs:</p>
 <ol>
@@ -189,7 +226,7 @@
   <li>Drop the result into design-template/.</li>
   <li>Tell Cursor to borrow layout and components from those files while keeping a simple codebase.</li>
 </ol>
-<p>Rule of thumb: if the export is messy, ask Cursor to clean it and centralize styles into style.css.</p>
+<p><strong>Rule of thumb</strong>: if the export is messy, ask Cursor to clean it and centralize styles into <code>style.css</code>.</p>
 <h2>When to switch from mock‑up to a framework</h2>
 <p>Stay static until you truly need forms, auth, dashboards, or a database. Then ask Cursor to port the mock‑up to React/Next.js or another framework. Keep the original static version as your visual source of truth.</p>
 <h2>Troubleshooting</h2>
@@ -218,6 +255,20 @@
   <li>One‑screen story on the home page: who it’s for, what it does, one action to take.</li>
 </ul>
 <h2>Appendix A: file tree you can copy</h2>
+<pre><code>my-project/
+  assets/
+    logo.svg
+    hero.jpg
+  design-template/
+    template-index.html
+    template-styles.css
+  prompts/
+    idea-raw.txt
+    build-brief.md
+  index.html
+  style.css
+  app.js
+  README.md</code></pre>
 <h2>Appendix B: edit prompt mini‑library</h2>
 <ul>
   <li>Palette swap: “Create CSS variables for primary #0F4C81, secondary #F3A712, neutral grays. Apply across buttons, links, headings.”</li>

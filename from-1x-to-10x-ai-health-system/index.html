@@ -69,6 +69,17 @@
     font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
   }
   blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  pre {
+    background: #f6f8fa; padding: 20px 24px; border-radius: 4px; overflow-x: auto;
+    font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 14px; line-height: 1.55;
+    margin: 28px 0; color: #1a1a1a; white-space: pre-wrap; word-wrap: break-word;
+    border: 1px solid var(--rule);
+  }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  code {
+    background: #f6f8fa; padding: 2px 6px; border-radius: 3px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 16px;
+  }
   hr.section-rule {
     border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
   }
@@ -94,14 +105,12 @@
   <p class="byline">By Sam Jafari</p>
 </header>
 
-<p>Amir
- highlighted</p>
-<p>Amir
- highlighted</p>
+<p><span><span>Amir</span><span> highlighted</span></span></p>
+<p><span><span>Amir</span><span> highlighted</span></span></p>
 <figure>
   <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/from-1x-to-10x-ai-health-system/images/image-01.jpg" alt="From 1x to 10x: What Happens When Your AI Health System Sees Your Mind and Body as One">
 </figure>
-<p>Most people give AI their lab results. I gave it my psychology too — alongside blood work, genetics, epigenetics, wearables, and supplements. The system gets smarter with every conversation. Here is how it works and how to build your own.</p>
+<p>Most people give AI their lab results. <mark>I gave it my psychology too</mark> — alongside blood work, <mark>genetics, epigenetics,</mark> wearables, and <mark>supplements</mark>. The system gets smarter with every conversation. Here is how it works and how to build your own.</p>
 <h2>The Limitation That Changed Everything</h2>
 <p>A while ago, I ran into a limitation that changed how I think about AI.</p>
 <p>Like a lot of people, I had been using ChatGPT as a thinking partner for health, psychology, and self-understanding. I had uploaded files, written custom instructions, stored context, and spent months building a useful relationship with the system. It was genuinely helpful. Better than starting from zero. Better than talking into the void. Better than scattered notes across apps and folders. But there was a gap.</p>
@@ -140,28 +149,9 @@
 </figure>
 <h2>The Data Sources</h2>
 <p>Over the past six months, I have fed 15+ distinct data sources spanning ten years of health history into this system. Here is what it ingests:</p>
-<p>✓Blood panels (Quest, Labcorp — 10 draws, 2016–2025)
-✓DEXA body composition scans
-✓23andMe genetics (631K SNPs)
-✓TruDiagnostic epigenetics (biological age)
-✓Viome gut + oral microbiome
-✓Apple Watch (HR, HRV, VO2 — since 2017)
-✓Withings scale (weight, body comp)
-✓Blood pressure (home monitoring)
-✓CGM glucose data
-✓Sleep tracking (duration, stages, timing)
-✓Dental records and treatment plans
-✓Eye exam Rx history (3 exams)
-✓Skin assessment (Haut.AI)
-✓Medical history, medications, immunizations
-✓ChatGPT conversation history (1,148 chats)
-✓Claude conversation history (188 chats)
-✓Brain dumps, journals, therapy notes
-✓Clinical visit notes</p>
-<blockquote><p>You don’t need all of this
-The system works with whatever you have. A single blood panel and one honest brain dump about how you are feeling is a useful start. Each new data source you add makes the picture richer, but nothing is required. Start with what is easy and build from there.</p></blockquote>
-<p>You don’t need all of this
-The system works with whatever you have. A single blood panel and one honest brain dump about how you are feeling is a useful start. Each new data source you add makes the picture richer, but nothing is required. Start with what is easy and build from there.</p>
+<p><strong>✓</strong>Blood panels (Quest, Labcorp — 10 draws, 2016–2025)<br><strong>✓</strong>DEXA body composition scans<br><strong>✓</strong>23andMe genetics (631K SNPs)<br><strong>✓</strong>TruDiagnostic epigenetics (biological age)<br><strong>✓</strong>Viome gut + oral microbiome<br><strong>✓</strong>Apple Watch (HR, HRV, VO2 — since 2017)<br><strong>✓</strong>Withings scale (weight, body comp)<br><strong>✓</strong>Blood pressure (home monitoring)<br><strong>✓</strong>CGM glucose data<br><strong>✓</strong>Sleep tracking (duration, stages, timing)<br><strong>✓</strong>Dental records and treatment plans<br><strong>✓</strong>Eye exam Rx history (3 exams)<br><strong>✓</strong>Skin assessment (Haut.AI)<br><strong>✓</strong>Medical history, medications, immunizations<br><strong>✓</strong>ChatGPT conversation history (1,148 chats)<br><strong>✓</strong>Claude conversation history (188 chats)<br><strong>✓</strong>Brain dumps, journals, therapy notes<br><strong>✓</strong>Clinical visit notes</p>
+<blockquote><p><strong><em>You don’t need all of this<br></em></strong>The system works with whatever you have. A single blood panel and one honest brain dump about how you are feeling is a useful start. Each new data source you add makes the picture richer, but nothing is required. Start with what is easy and build from there.</p></blockquote>
+<p><strong><em>You don’t need all of this<br></em></strong>The system works with whatever you have. A single blood panel and one honest brain dump about how you are feeling is a useful start. Each new data source you add makes the picture richer, but nothing is required. Start with what is easy and build from there.</p>
 <h2>What Makes It Self-Learning</h2>
 <p>This is the part that separates it from a health app or a folder of files.</p>
 <p>Every time new information enters the system — from a lab result, a conversation, a wearable export, or a brain dump — it triggers a cascade of updates across the entire project. The AI does not just store the new data. It walks through every connected file and asks: does this change anything?</p>
@@ -215,33 +205,21 @@ The system works with whatever you have. A single blood panel and one honest bra
   <li>Start having conversations. Ask questions. Do a brain dump. Discuss symptoms. Every conversation updates the system.</li>
 </ol>
 <h2>What Happens After Setup</h2>
-<blockquote><p>Day 1: Answer profile questions. Do a brain dump about how you are feeling — physically and psychologically. Drop any lab results you have into inbox/.
-
-First week: Export and drop wearable data. Fill in your supplement stack. Do 2–3 psychology check-ins (just talk to the AI about what is on your mind).
-
-First month: Get a comprehensive blood panel if you do not have recent labs. Ask the AI to run a baseline health assessment. Start one self-experiment.
-
-Ongoing: Drop new data as it arrives. Weekly psychology check-ins. Monthly trend reviews. Quarterly full assessments. The system compounds — every week it knows more than the last.</p></blockquote>
-<p>Day 1: Answer profile questions. Do a brain dump about how you are feeling — physically and psychologically. Drop any lab results you have into inbox/.</p>
-<p>First week: Export and drop wearable data. Fill in your supplement stack. Do 2–3 psychology check-ins (just talk to the AI about what is on your mind).</p>
-<p>First month: Get a comprehensive blood panel if you do not have recent labs. Ask the AI to run a baseline health assessment. Start one self-experiment.</p>
-<p>Ongoing: Drop new data as it arrives. Weekly psychology check-ins. Monthly trend reviews. Quarterly full assessments. The system compounds — every week it knows more than the last.</p>
+<blockquote><p><strong>Day 1:</strong> Answer profile questions. Do a brain dump about how you are feeling — physically and psychologically. Drop any lab results you have into <code>inbox/</code>.</p><p id="3ec0"><strong>First week:</strong> Export and drop wearable data. Fill in your supplement stack. Do 2–3 psychology check-ins (just talk to the AI about what is on your mind).</p><p id="a43f"><strong>First month:</strong> Get a comprehensive blood panel if you do not have recent labs. Ask the AI to run a baseline health assessment. Start one self-experiment.</p><p id="3348"><strong>Ongoing:</strong> Drop new data as it arrives. Weekly psychology check-ins. Monthly trend reviews. Quarterly full assessments. The system compounds — every week it knows more than the last.</p></blockquote>
+<p><strong>Day 1:</strong> Answer profile questions. Do a brain dump about how you are feeling — physically and psychologically. Drop any lab results you have into <code>inbox/</code>.</p>
+<p><strong>First week:</strong> Export and drop wearable data. Fill in your supplement stack. Do 2–3 psychology check-ins (just talk to the AI about what is on your mind).</p>
+<p><strong>First month:</strong> Get a comprehensive blood panel if you do not have recent labs. Ask the AI to run a baseline health assessment. Start one self-experiment.</p>
+<p><strong>Ongoing:</strong> Drop new data as it arrives. Weekly psychology check-ins. Monthly trend reviews. Quarterly full assessments. The system compounds — every week it knows more than the last.</p>
 <h2>If You Have ChatGPT or Claude History</h2>
 <p>The setup file includes a full pipeline for importing your AI conversation history. It scans every conversation with keyword scoring, extracts the health- and psychology-relevant ones, preserves your exact words, and populates your project with months or years of context you have already generated. If you have been talking to ChatGPT about stress, sleep, supplements, or burnout, that becomes your starting dataset.</p>
-<blockquote><p>Export your history
-
-ChatGPT: Go to chatgpt.com → Profile → Settings → Data Controls → Export Data. You will receive a ZIP file with all your conversations.
-
-Claude: Go to claude.ai → Settings → Account → Export Data.
-
-Drop the unzipped export folder into inbox/ and tell the AI to process it. The system handles the rest.</p></blockquote>
+<blockquote><p>Export your history</p><p id="c66f"><strong>ChatGPT:</strong> Go to chatgpt.com → Profile → Settings → Data Controls → Export Data. You will receive a ZIP file with all your conversations.</p><p id="62ab"><strong>Claude:</strong> Go to claude.ai → Settings → Account → Export Data.</p><p id="dbd0">Drop the unzipped export folder into <code>inbox/</code> and tell the AI to process it. The system handles the rest.</p></blockquote>
 <p>Export your history</p>
-<p>ChatGPT: Go to chatgpt.com → Profile → Settings → Data Controls → Export Data. You will receive a ZIP file with all your conversations.</p>
-<p>Claude: Go to claude.ai → Settings → Account → Export Data.</p>
-<p>Drop the unzipped export folder into inbox/ and tell the AI to process it. The system handles the rest.</p>
+<p><strong>ChatGPT:</strong> Go to chatgpt.com → Profile → Settings → Data Controls → Export Data. You will receive a ZIP file with all your conversations.</p>
+<p><strong>Claude:</strong> Go to claude.ai → Settings → Account → Export Data.</p>
+<p>Drop the unzipped export folder into <code>inbox/</code> and tell the AI to process it. The system handles the rest.</p>
 <h2>The Setup File</h2>
 <p>The complete setup file is linked below. It is a single markdown document — about 1,700 lines — containing every instruction the AI needs to build your project from scratch. Paste it into Claude Code and the system handles the rest.</p>
-<p>→ Download: Personal Health &amp; Performance Project — AI Setup Guide</p>
+<p><strong>→ </strong><a href="https://github.com/Sam-Jafari/Shared-AI-Instructions/blob/main/health/personal-health-project-setup.md"><strong>Download: Personal Health &amp; Performance Project — AI Setup Guide</strong></a></p>
 <h2>Why I Am Sharing This</h2>
 <p>Not because everyone should become a biohacker or build a quantified-self shrine on their laptop. But because many people are already sitting on the raw material. They already have histories. They already have data. They already ask AI questions they would not ask anyone else. The missing piece is turning that chaos into a system.</p>
 <p>Your body is not a dashboard. Your mind is not a separate app. And your life is not a stack of disconnected files.</p>

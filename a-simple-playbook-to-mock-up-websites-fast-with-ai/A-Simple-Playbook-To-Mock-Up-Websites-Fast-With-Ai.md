@@ -8,7 +8,7 @@ By Sam Jafari
 
 ![](images/image-01.jpg)
 
-This is a step‑by‑step manual to help you use Cursor with an AI coder (e.g., Claude Sonnet 4.5, or any model you pick) to turn an idea into a working web mock‑up in hours. No prior coding experience needed.
+This is a step‑by‑step manual to help you use **Cursor** with an AI coder (e.g., **Claude Sonnet 4.5**, or any model you pick) to turn an idea into a working web mock‑up in hours. No prior coding experience needed.
 
 ## What you’ll need
 
@@ -16,9 +16,9 @@ This is a step‑by‑step manual to help you use Cursor with an AI coder (e.g.,
 - A web browser (Chrome, Edge, Safari, etc.).
 - Optional: a phone for voice notes and any transcription app (Voice Memos + built‑in transcription, Otter, Whisper, Google Recorder, etc.).
 
-> Goal: a shareable static website made of HTML, CSS, and JavaScript that looks and feels like your target product. Perfect for feedback and early demos.
+> *Goal: a shareable ****static**** website made of ****HTML, CSS, and JavaScript**** that looks and feels like your target product. Perfect for feedback and early demos.*
 
-Goal: a shareable static website made of HTML, CSS, and JavaScript that looks and feels like your target product. Perfect for feedback and early demos.
+*Goal: a shareable ****static**** website made of ****HTML, CSS, and JavaScript**** that looks and feels like your target product. Perfect for feedback and early demos.*
 
 ## Ten‑minute quick start
 
@@ -39,6 +39,14 @@ Goal: a shareable static website made of HTML, CSS, and JavaScript that looks an
 
 Create a clean structure so the AI can see everything.
 
+```
+coffee-booster-site/
+  assets/                 # images, logos, icons, sample data
+  design-template/        # your downloaded HTML/CSS/JS starter
+  prompts/                # instruction files you’ll write and iterate on
+  README.md               # decisions, links, notes
+```
+
 - Keep filenames simple: index.html, style.css, app.js.
 - Prefer plain HTML/CSS/JS for mock‑ups. It’s easier for the AI to read and modify.
 - Check the template license if you plan to publish.
@@ -47,7 +55,7 @@ Create a clean structure so the AI can see everything.
 
 Talk like you’re explaining it to a friend. Don’t edit yourself.
 
-What to cover
+**What to cover**
 
 - Who is this for and what problem it solves.
 - Pages and sections you want (Home, Pricing, FAQ, Dashboard, Booking…).
@@ -56,7 +64,7 @@ What to cover
 - Examples you like (paste site links in your transcript).
 - Success: what a “good first mock‑up” should show.
 
-Transcribe the audio with any app. Put all text into prompts/idea-raw.txt.
+Transcribe the audio with any app. Put all text into `prompts/idea-raw.txt`.
 
 ![](images/image-03.jpg)
 
@@ -64,13 +72,13 @@ Transcribe the audio with any app. Put all text into prompts/idea-raw.txt.
 
 Paste your transcript into your favorite AI chat and ask:
 
-> “Rewrite this as a detailed build brief for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in /design-template/. Output as Markdown that I can save to /prompts/build-brief.md. Keep technology choices to HTML/CSS/JS. Include a numbered task plan.”
+> *“Rewrite this as a ****detailed build brief**** for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in *`*/design-template/*`*. Output as Markdown that I can save to *`*/prompts/build-brief.md*`*. Keep technology choices to ****HTML/CSS/JS****. Include a numbered task plan.”*
 
-“Rewrite this as a detailed build brief for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in /design-template/. Output as Markdown that I can save to /prompts/build-brief.md. Keep technology choices to HTML/CSS/JS. Include a numbered task plan.”
+*“Rewrite this as a ****detailed build brief**** for a static web mock‑up. Organize it as: goals, pages, sections, content, components, interactions, color palette, typography, assets list, file plan. Reference the design template in *`*/design-template/*`*. Output as Markdown that I can save to *`*/prompts/build-brief.md*`*. Keep technology choices to ****HTML/CSS/JS****. Include a numbered task plan.”*
 
-Save the result as prompts/build-brief.md.
+Save the result as `prompts/build-brief.md`.
 
-Why this matters A good brief acts like rails. Cursor will ask fewer questions and produce cleaner files.
+**Why this matters** A good brief acts like rails. Cursor will ask fewer questions and produce cleaner files.
 
 ![](images/image-04.jpg)
 
@@ -79,6 +87,15 @@ Why this matters A good brief acts like rails. Cursor will ask fewer questions a
 1. Open the project folder in Cursor so it can index your files.
 2. Switch to Plan mode.
 3. Paste a short instruction like:
+
+```
+Read /prompts/build-brief.md and review /design-template/.
+Create a plan to implement a static mock‑up using HTML, CSS, and JS only.
+Plan must include: file list, folder placement, and a step order for building.
+After showing the plan, proceed to build the files.
+Target output: index.html at project root, /assets for images, /style.css, /app.js.
+Keep CSS organized with variables and responsive rules (mobile first).
+```
 
 1. If Cursor asks clarifying questions, answer in plain language. If you don’t know, say what outcome you want (“fast to load”, “clean and modern”).
 2. Click Build. Let it create files.
@@ -91,7 +108,7 @@ Why this matters A good brief acts like rails. Cursor will ask fewer questions a
 
 Talk to Cursor like an editor.
 
-Useful edit requests
+**Useful edit requests**
 
 - “Replace the hero background with /assets/hero.jpg, keep text centered.”
 - “Change primary color to #0F4C81 and add CSS variables --primary, --primary-100… then update buttons and links.”
@@ -100,11 +117,32 @@ Useful edit requests
 - “Improve mobile layout: stack cards, increase tap targets, test on iPhone 13 width.”
 - “Refactor styles into style.css. Keep HTML clean.”
 
-Tip: Point to files by path and quote the parts you want changed. Cursor reads your project.
+**Tip**: Point to files by path and quote the parts you want changed. Cursor reads your project.
 
 ## Example: a ready‑to‑use Master Build Prompt
 
 Copy, paste, and adjust the bracketed sections.
+
+```
+You are building a STATIC web mock‑up (HTML, CSS, JS). No frameworks.
+```
+
+```
+Inputs:
+- Build brief: /prompts/build-brief.md
+- Design reference: /design-template/ (use structure and visual patterns, not exact text)
+Deliverables:
+1) Files at project root: index.html, style.css, app.js, /assets.
+2) Responsive layout (mobile first, then tablet, then desktop).
+3) Clear CSS variables for colors, spacing, radii, shadows, font sizes.
+4) Sections: [Navbar], [Hero], [Feature grid], [Testimonials], [Pricing], [FAQ], [Footer].
+5) Accessibility basics: semantic tags, alt text, focus states, contrast.
+Process:
+- Print a step‑by‑step PLAN with file list and tasks.
+- Ask up to 5 clarifying questions if needed.
+- Build the files, then list what changed.
+- Provide a short test checklist for me to verify.
+```
 
 ## Bringing Figma into the loop (optional)
 
@@ -114,7 +152,7 @@ If you have Figma designs:
 2. Drop the result into design-template/.
 3. Tell Cursor to borrow layout and components from those files while keeping a simple codebase.
 
-Rule of thumb: if the export is messy, ask Cursor to clean it and centralize styles into style.css.
+**Rule of thumb**: if the export is messy, ask Cursor to clean it and centralize styles into `style.css`.
 
 ## When to switch from mock‑up to a framework
 
@@ -146,6 +184,23 @@ Stay static until you truly need forms, auth, dashboards, or a database. Then as
 - One‑screen story on the home page: who it’s for, what it does, one action to take.
 
 ## Appendix A: file tree you can copy
+
+```
+my-project/
+  assets/
+    logo.svg
+    hero.jpg
+  design-template/
+    template-index.html
+    template-styles.css
+  prompts/
+    idea-raw.txt
+    build-brief.md
+  index.html
+  style.css
+  app.js
+  README.md
+```
 
 ## Appendix B: edit prompt mini‑library
 
