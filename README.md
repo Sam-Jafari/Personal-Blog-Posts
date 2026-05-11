@@ -16,6 +16,7 @@ Source-of-truth repository for blog posts authored by Sam Jafari. One folder per
 | The Data Stack Behind My AI Health Copilot | [`the-data-stack-behind-my-ai-health-copilot/`](the-data-stack-behind-my-ai-health-copilot/) | [Medium](https://medium.com/@samjafari/the-data-stack-behind-my-ai-health-copilot-2e309ee8954a) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/the-data-stack-behind-my-ai-health-copilot/) |
 | When Posting Feels Like Helping, But Isn't | [`when-posting-feels-like-helping-but-isnt/`](when-posting-feels-like-helping-but-isnt/) | [Medium](https://medium.com/@samjafari/when-posting-feels-like-helping-but-isnt-9c0b5e3edf3c) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/when-posting-feels-like-helping-but-isnt/) |
 | A calmer way to follow Iran: let an AI agent do the digging, not your nervous system | [`a-calmer-way-to-follow-iran-ai-agent/`](a-calmer-way-to-follow-iran-ai-agent/) | [Medium](https://medium.com/@samjafari/a-calmer-way-to-follow-iran-let-an-ai-agent-do-the-digging-not-your-nervous-system-86835d3c14a1) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/a-calmer-way-to-follow-iran-ai-agent/) |
+| Owning My Health Data, With AI as Health Copilot | [`owning-my-health-data-with-ai-as-health-copilot/`](owning-my-health-data-with-ai-as-health-copilot/) | [Medium](https://medium.com/@samjafari/owning-my-health-data-with-ai-as-health-copilot-c14e9cbc9c93) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/owning-my-health-data-with-ai-as-health-copilot/) |
 
 ## Publishing to Medium
 

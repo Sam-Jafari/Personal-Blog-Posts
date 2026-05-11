@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owning My Health Data, With AI as Health Copilot</title>
+<meta name="description" content="Owning My Health Data, With AI as Health Copilot.">
+<meta property="og:title" content="Owning My Health Data, With AI as Health Copilot">
+<meta property="og:description" content="Owning My Health Data, With AI as Health Copilot">
+<meta property="og:image" content="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/owning-my-health-data-with-ai-as-health-copilot/images/image-01.jpg">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --text: #292929;
+    --muted: #6b6b6b;
+    --rule: #e6e6e6;
+    --accent: #1a1a1a;
+    --bg: #ffffff;
+  }
+  html, body { background: var(--bg); margin: 0; padding: 0; }
+  body {
+    font-family: 'Charter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    color: var(--text);
+    max-width: 720px;
+    margin: 60px auto 120px;
+    padding: 0 24px;
+    line-height: 1.65;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.article-head { margin-bottom: 40px; }
+  h1 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 44px; line-height: 1.12; letter-spacing: -0.025em;
+    font-weight: 700; margin: 0 0 16px; color: var(--accent);
+  }
+  .subtitle {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 18px; line-height: 1.35; color: var(--muted);
+    font-weight: 400; margin: 0; font-style: italic;
+  }
+  .byline {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 24px; letter-spacing: 0.02em;
+  }
+  h2 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 28px; line-height: 1.25; letter-spacing: -0.015em;
+    font-weight: 700; margin: 44px 0 14px; color: var(--accent);
+  }
+  h3 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--accent);
+  }
+  p { margin: 0 0 18px; font-size: 19px; line-height: 1.65; }
+  p em { font-style: italic; }
+  ul, ol { margin: 0 0 18px; padding-left: 28px; }
+  li { margin-bottom: 8px; line-height: 1.65; }
+  figure { margin: 36px 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 2px; }
+  figcaption {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.5;
+    text-align: center; font-style: italic;
+  }
+  blockquote {
+    border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 28px 0;
+    font-size: 22px; font-style: italic; color: var(--accent); line-height: 1.4;
+    font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
+  }
+  blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  hr.section-rule {
+    border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
+  }
+  .ack {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); font-style: italic; text-align: center;
+    margin: 32px auto 0; max-width: 600px; line-height: 1.55;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 18px; padding: 0 18px; margin-top: 36px; }
+    h1 { font-size: 34px; } .subtitle { font-size: 16px; }
+    h2 { font-size: 24px; margin-top: 36px; } figure { margin: 28px 0; }
+    blockquote { font-size: 20px; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="article-head">
+  <h1>Owning My Health Data, With AI as Health Copilot</h1>
+  <p class="subtitle">Originally published on Medium, November 4, 2025</p>
+  <p class="byline">By Sam Jafari</p>
+</header>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/owning-my-health-data-with-ai-as-health-copilot/images/image-01.jpg" alt="Owning My Health Data, With AI as Health Copilot">
+</figure>
+<p>There’s a rhythm to my checkups now. A DEXA printout on the table. A fresh lab panel open on my laptop. Apple Health quietly logging sleep and workouts in the background. I sit down, open my Health Advisor project, and ask one question:</p>
+<p>What changed, and what should I do about it?</p>
+<p>This is a follow-up to my last post about biohacking as steady, data-guided nudging. No shortcuts. Just deliberate, measurable steps toward more energy, clearer thinking, and lower long-term risk. What follows is the system I use to make that possible. It’s not a doctor. It’s a thinking partner that remembers context, surfaces patterns, and helps me arrive at a reasonable plan before I talk with my clinicians.</p>
+<blockquote><p>Note for readers: I’ve attached a generic, shareable version of my Health Advisor project prompt so you can build your own. See the “Resources” section at the end.</p></blockquote>
+<p>Note for readers: I’ve attached a generic, shareable version of my Health Advisor project prompt so you can build your own. See the “Resources” section at the end.</p>
+<h2>Why I built it</h2>
+<p>Collecting numbers is easy now. Making sense of them is hard. Labs live in one portal, imaging in another, wearables in a third. Even great clinicians can’t stitch all that together in a 20-minute visit.</p>
+<p>With clear instructions and clean inputs, an AI model can pull those threads together. My goal isn’t to replace judgment; it’s to shorten the distance from new data → reasonable plan, so the conversation with my doctor starts closer to the answer.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/owning-my-health-data-with-ai-as-health-copilot/images/image-02.jpg" alt="Owning My Health Data, With AI as Health Copilot">
+</figure>
+<h2>What the Health Advisor is</h2>
+<p>It’s a plain-English brief that tells the model three things:</p>
+<ol>
+  <li>What I’m optimizing for. Energy, cognition, fitness, and prevention.</li>
+  <li>How to reason. Explain mechanisms, grade evidence, propose success metrics, and show risks or interactions.</li>
+  <li>When to defer. Flag anything that needs a clinician’s eyes.</li>
+</ol>
+<p>The outcome I want isn’t “do X.” It’s a strong hypothesis I can test and then pressure-test with my physician.</p>
+<h2>The inputs that matter</h2>
+<p>The project is only as good as its data. I keep five sources current and dated:</p>
+<ul>
+  <li>Comprehensive labs. Not the 20-marker annual. A true baseline with 100+ markers that cover lipids, insulin sensitivity, inflammation, hormones, and micronutrients.</li>
+  <li>DEXA scans. Lean mass, regional fat, bone density, visceral fat. It turns “weight” into something actionable.</li>
+  <li>Wearables. Sleep duration and efficiency, resting HR and HRV, activity minutes, workout types.</li>
+  <li>Medical history. Diagnoses, procedures, allergies, meds, family history. I sync provider portals to Apple Health, then export.</li>
+  <li>Genetic and epigenetic context. Short, dated summaries used as risk context, not destiny.</li>
+</ul>
+<p>Rule of thumb: if a number matters, it lives in text with a date. I convert key values to Markdown, YAML, or JSON, rather than relying on raw PDFs. That way the model can parse deterministically and compare apples to apples.</p>
+<h2>How I use it day to day</h2>
+<p>I route most health questions through the project first. Food experiments. Supplement timing. Training blocks. Sleep tweaks. “Am I thinking about this shoulder pain the right way?” The Health Advisor gives me a structured first pass.</p>
+<p>For anything serious or persistent, I treat the output as a hypothesis generator. I check citations, ask for mechanism and effect size, and then book time with my physician: here is my data, here is the synthesized plan, what am I missing? That visit begins on third base, not in the parking lot.</p>
+<p>A few habits make this work:</p>
+<ul>
+  <li>Keep all health conversations in the same project, so context accumulates.</li>
+  <li>Even if I speak, I send text. Clean, dated text beats free-form voice for reliability.</li>
+  <li>I never assume the model “saw” a number in an attachment. If it matters, I paste it or store it in a text file the project references.</li>
+</ul>
+<h2>What the model actually does</h2>
+<p>It handles the grunt work I used to do by hand:</p>
+<ul>
+  <li>Compares new labs to the last snapshot, highlights meaningful changes, ignores noise.</li>
+  <li>Translates “normal” into optimal for my goals and shows what to track if I change an intervention.</li>
+  <li>Ranks options by expected effect size, risk, and effort.</li>
+  <li>Attaches success metrics and retest timing to every plan.</li>
+  <li>Checks for interactions between meds and supplements and flags items for physician review.</li>
+</ul>
+<p>None of this replaces clinical care. It raises the floor on my own thinking so clinical care can go deeper, faster.</p>
+<h2>The guardrails</h2>
+<ul>
+  <li>Evidence first. Prefer primary sources. Explain the “why,” not just the “what.”</li>
+  <li>No guessing. If confidence is low, say so and propose ways to reduce uncertainty.</li>
+  <li>Physician gates. Anything with safety implications gets a “doctor required” label.</li>
+  <li>Measurable plans. Every recommendation ships with metrics, timelines, and stop/adjust criteria.</li>
+  <li>Privacy. Store only what’s useful. Keep exports tidy. Treat health data like financial data.</li>
+</ul>
+<h2>Build your own in an afternoon</h2>
+<p>You don’t need a dev team. Start small.</p>
+<ol>
+  <li>Write a one-page brief in plain English. State your goals, constraints, and rules (including “do not guess”). Ask for evidence grading, risks, dose/timing when relevant, and success metrics.</li>
+  <li>Assemble a baseline pack. One comprehensive lab panel, one DEXA, a month of wearable summaries, and a dated list of meds and supplements.</li>
+  <li>Convert key values to text. Markdown, YAML, or JSON. Always include dates and units.</li>
+  <li>Ask one focused question. Review the plan, then review it with your clinician.</li>
+  <li>Iterate quarterly. Track trends. Retire what isn’t working. Add new experiments carefully.</li>
+</ol>
+<h2>What changed for me</h2>
+<p>The biggest shift is psychological. Numbers stopped being threats and turned into maps. Friends ask if I’m afraid I’ll find something scary. I’m not. Early truth is kind. Most bodies heal when you remove the cause and give them time. My job is to notice early, pick a lever, and measure the effect. AI helps me do that faster and with fewer blind spots.</p>
+<h2>Disclaimer</h2>
+<p>This is my personal process. It is not medical advice. Always review plans and interventions with qualified clinicians who know your history. In my decisions, physician judgment carries the most weight; AI helps me prepare for that conversation.</p>
+<h2>Resources</h2>
+<ul>
+  <li>AI Health Advisor Project Instructions:</li>
+</ul>
+<p>Related Post: The Data Stack Behind My AI Health Copilot</p>
+
+<hr class="section-rule">
+
+<p class="ack">Originally published on <a href="https://medium.com/@samjafari/owning-my-health-data-with-ai-as-health-copilot-c14e9cbc9c93">Medium</a>, November 4, 2025.</p>
+
+</body>
+</html>
