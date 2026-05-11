@@ -20,9 +20,7 @@ The child does not learn safety from one source. Safety is layered into them. In
 
 If human moral development requires more than one layer, AI safety probably does too.
 
-The resemblance is striking. Humans absorb patterns from the world; AI systems absorb patterns from data. Humans are shaped by feedback, correction, and consequence; AI systems are shaped by tuning, preference learning, and reinforcement. Humans operate inside a social order; AI systems are deployed inside a framework of policies and guardrails.
-
-Once you see that layered resemblance, it becomes hard to unsee.
+The resemblance is striking. Humans absorb patterns from the world; AI systems absorb patterns from data. Humans are shaped by feedback, correction, and consequence; AI systems are shaped by tuning, preference learning, and reinforcement. Humans operate inside a social order; AI systems are deployed inside a framework of policies and guardrails. Once you see that layered resemblance, it becomes hard to unsee.
 
 ![A continuous developmental scene: a child grows from toddler in a parent's arms, through schoolchild with a teacher, to young adult in a civic plaza. Above, an AI passes through three corresponding stages of formation, mirroring each life stage.](images/master-narrative-arc.png)
 
@@ -36,13 +34,9 @@ Human beings do not arrive as blank machines.
 
 We come into the world with inherited tendencies shaped by a very long history. We are wired for attachment, fear, imitation, cooperation, status, belonging, and self-protection. Some of those tendencies make social life possible. Some make it difficult. But either way, they are there before any teacher, school, or law enters the picture.
 
-Then childhood begins shaping that raw material.
+Then childhood begins shaping that raw material. A parent smiles when a child shares. A teacher praises patience. A sibling pushes back when a boundary is crossed. A friend withdraws after betrayal. Over time, behavior becomes tied to emotional consequence. Kindness brings warmth. Rejection stings. Shame teaches. Pride reinforces. Trust becomes something you want to preserve.
 
-A parent smiles when a child shares. A teacher praises patience. A sibling pushes back when a boundary is crossed. A friend withdraws after betrayal. Over time, behavior becomes tied to emotional consequence. Kindness brings warmth. Rejection stings. Shame teaches. Pride reinforces. Trust becomes something you want to preserve.
-
-Then society adds another layer.
-
-Laws, institutions, courts, contracts, reputations, and cultural norms do not create morality from scratch. They sit on top of human nature and human upbringing. They reinforce, constrain, and stabilize behavior at scale.
+Then society adds another layer. Laws, institutions, courts, contracts, reputations, and cultural norms do not create morality from scratch. They sit on top of human nature and human upbringing. They reinforce, constrain, and stabilize behavior at scale.
 
 This is the deeper truth: human alignment is layered. It always has been.
 
@@ -50,9 +44,7 @@ We are shaped first by deep inherited priors, then by social learning, then by t
 
 That would be absurd.
 
-And yet, in AI, we often talk as if safety can be solved exactly that way.
-
-Train a powerful model on the full mess of human culture. Add a few filters. Wrap it in a policy layer. Call it aligned.
+And yet, in AI, we often talk as if safety can be solved exactly that way. Train a powerful model on the full mess of human culture. Add a few filters. Wrap it in a policy layer. Call it aligned.
 
 That is not development. That is cleanup.
 
@@ -74,21 +66,11 @@ The first layer is pretraining. A model is exposed to a huge amount of text, cod
 
 In human terms, this is the deepest layer. The earliest wiring. The inherited material. The starting point.
 
-Then comes post-training.
+Then comes post-training. This is where the model is taught how to behave in a way humans actually want. It learns to follow instructions. It learns what kinds of responses are useful, honest, and safe. It gets steered away from behaviors people judge as harmful, misleading, or reckless. Through human feedback, ranking, correction, and reinforcement, the system becomes more cooperative and more aligned with human preferences. That is remarkably close to the role family, school, and social learning play in human development.
 
-This is where the model is taught how to behave in a way humans actually want. It learns to follow instructions. It learns what kinds of responses are useful, honest, and safe. It gets steered away from behaviors people judge as harmful, misleading, or reckless. Through human feedback, ranking, correction, and reinforcement, the system becomes more cooperative and more aligned with human preferences.
+Then comes the outer layer: deployment guardrails. System prompts, policy layers, permissions, tool restrictions, rate limits, monitoring, logging, human approvals, and governance are the social institutions around the model. These are the laws and boundaries of the AI world. They decide what the system is allowed to do, what tools it can touch, what actions need approval, and what behavior triggers intervention.
 
-That is remarkably close to the role family, school, and social learning play in human development.
-
-Then comes the outer layer: deployment guardrails.
-
-System prompts, policy layers, permissions, tool restrictions, rate limits, monitoring, logging, human approvals, and governance are the social institutions around the model. These are the laws and boundaries of the AI world. They decide what the system is allowed to do, what tools it can touch, what actions need approval, and what behavior triggers intervention.
-
-Once you frame it this way, the core lesson becomes obvious.
-
-Safety cannot live in one layer.
-
-Not in humans. Not in AI.
+Once you frame it this way, the core lesson becomes obvious. Safety cannot live in one layer. Not in humans. Not in AI.
 
 If the deepest layer is shaped badly, the upper layers have to work overtime. If the middle layer is weak, the model may know a lot but behave poorly. If the outer layer is missing, even a well-trained system can drift into dangerous territory once it gains tools, access, and agency.
 
@@ -124,9 +106,7 @@ What is the equivalent of humility? It may be calibrated uncertainty. Admitting 
 
 What is the equivalent of responsibility? It may be recognizing that helping one user do something harmful is not a local action. It changes the safety of the whole environment.
 
-This is where the analogy stops being poetic and starts becoming practical.
-
-We do not need artificial emotions. We need artificial systems whose behavior reflects the same stabilizing functions that emotions and moral learning provide in people.
+This is where the analogy stops being poetic and starts becoming practical. We do not need artificial emotions. We need artificial systems whose behavior reflects the same stabilizing functions that emotions and moral learning provide in people.
 
 That is a much more useful target.
 
@@ -134,13 +114,9 @@ That is a much more useful target.
 
 ## The epigenome of AI
 
-There is another part of biology that offers a surprisingly useful lens here.
+There is another part of biology that offers a surprisingly useful lens here. The genome is not the whole story. What matters is not only what is present, but what gets activated, where, and under what conditions. Different cells express different parts of the same underlying code. The same biological foundation produces different outcomes depending on context, signals, and environment.
 
-The genome is not the whole story. What matters is not only what is present, but what gets activated, where, and under what conditions. Different cells express different parts of the same underlying code. The same biological foundation produces different outcomes depending on context, signals, and environment.
-
-AI has a parallel story.
-
-A model may contain many capabilities, but not every capability is activated equally in every situation. Context matters. Prompts matter. Fine-tuning matters. Retrieval changes what information is available. Permissions change what actions are possible. Mixture-of-experts systems route different tasks through different parts of the model. Adapters and domain tuning can make the same base system behave very differently under different conditions.
+AI has a parallel story. A model may contain many capabilities, but not every capability is activated equally in every situation. Context matters. Prompts matter. Fine-tuning matters. Retrieval changes what information is available. Permissions change what actions are possible. Mixture-of-experts systems route different tasks through different parts of the model. Adapters and domain tuning can make the same base system behave very differently under different conditions.
 
 That means the real question is not only, *What does the model know?* It is also, *What gets activated? Under what context? With what constraints? Toward what objective?*
 
@@ -168,17 +144,13 @@ It tells us to think like builders of developmental systems.
 
 What kind of base patterns are we feeding into the model? What behaviors are we rewarding? What kinds of self-correction are we teaching? What tools can the model use? What happens when uncertainty rises? What happens when the model is pressured, manipulated, or tempted into harmful shortcuts? What institutions surround it when it is deployed into the real world?
 
-These are not philosophical side questions. They are the central engineering questions.
-
-And they become much easier to understand once you borrow the human frame.
+These are not philosophical side questions. They are the central engineering questions. And they become much easier to understand once you borrow the human frame.
 
 ---
 
 ## Raising a mind inside a society
 
-The point of all this is not to blur the line between humans and machines.
-
-The point is that the human story gives us the best intuition we have for how intelligence becomes safe enough to live among others.
+The point of all this is not to blur the line between humans and machines. The point is that the human story gives us the best intuition we have for how intelligence becomes safe enough to live among others.
 
 Humans did not become cooperative through raw intelligence alone. We built layers around intelligence. Inheritance. Learning. Reward. Correction. Social pressure. Institutions. Consequence. Accountability.
 
