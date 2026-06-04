@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehicle Safety Doesn't End at the Factory Gate</title>
+<meta name="description" content="A car keeps changing for its whole life. Most of the data that could keep it safe gets switched off the day it ships.">
+<meta property="og:title" content="Vehicle Safety Doesn't End at the Factory Gate">
+<meta property="og:description" content="A car keeps changing for its whole life. Most of the data that could keep it safe gets switched off the day it ships.">
+<meta property="og:image" content="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/vehicle-safety-doesnt-end-at-the-factory-gate/images/image-01.jpg">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --text: #292929;
+    --muted: #6b6b6b;
+    --rule: #e6e6e6;
+    --accent: #1a1a1a;
+    --bg: #ffffff;
+  }
+  html, body { background: var(--bg); margin: 0; padding: 0; }
+  body {
+    font-family: 'Charter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    color: var(--text);
+    max-width: 720px;
+    margin: 60px auto 120px;
+    padding: 0 24px;
+    line-height: 1.65;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.article-head { margin-bottom: 40px; }
+  h1 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 44px; line-height: 1.12; letter-spacing: -0.025em;
+    font-weight: 700; margin: 0 0 16px; color: var(--accent);
+  }
+  .subtitle {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 18px; line-height: 1.35; color: var(--muted);
+    font-weight: 400; margin: 0; font-style: italic;
+  }
+  .byline {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 24px; letter-spacing: 0.02em;
+  }
+  h2 {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 28px; line-height: 1.25; letter-spacing: -0.015em;
+    font-weight: 700; margin: 44px 0 14px; color: var(--accent);
+  }
+  p { margin: 0 0 18px; font-size: 19px; line-height: 1.65; }
+  p em { font-style: italic; }
+  figure { margin: 36px 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 2px; }
+  figcaption {
+    font-family: 'Söhne', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.5;
+    text-align: center; font-style: italic;
+  }
+  blockquote {
+    border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 28px 0;
+    font-size: 22px; font-style: italic; color: var(--accent); line-height: 1.4;
+    font-family: 'Charter', 'Iowan Old Style', Georgia, serif;
+  }
+  blockquote p { margin: 0; font-size: inherit; line-height: inherit; }
+  hr.section-rule {
+    border: none; border-top: 1px solid var(--rule); margin: 36px auto; max-width: 240px;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 18px; padding: 0 18px; margin-top: 36px; }
+    h1 { font-size: 34px; } .subtitle { font-size: 16px; }
+    figure { margin: 28px 0; }
+    blockquote { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="article-head">
+  <h1>Vehicle Safety Doesn&rsquo;t End at the Factory Gate</h1>
+  <p class="subtitle">A car keeps changing for its whole life. Most of the data that could keep it safe gets switched off the day it ships.</p>
+  <p class="byline">By Sam Jafari</p>
+</header>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/vehicle-safety-doesnt-end-at-the-factory-gate/images/image-01.jpg" alt="A car drives from a factory toward a distant horizon, cradled by a fine teal protective shield whose line continues along the road to the horizon.">
+  <figcaption>A car spends years on the road after the factory. The protection should travel the whole way, not stop at the gate.</figcaption>
+</figure>
+
+<p>Before anyone can buy a new car, a small fleet of them is already being driven into the ground.</p>
+
+<p>These are the pre-production cars, the release candidates, and they live a hard life. They run hot laps in the desert, soak through cold nights, get slammed over broken pavement, and pile on miles faster than any owner ever would. Every one of them is wired up. Hundreds of signals stream off each car as it drives: temperatures, pressures, currents, the way a steering system answers when you ask it to turn, the way a battery behaves on a long climb. Engineers watch that data because it shows them what a single test on a single day never can. A part running a little hotter than its neighbors. A reading drifting a few percent each week. The early shape of wear, long before it turns into a failure.</p>
+
+<p>I spent six years building the data platform that did this at Lucid, and that fleet is where I stopped thinking about vehicle data as a reporting tool and started seeing it as a safety tool. The cars told us what was getting tired before it broke, and we could fix it before a customer felt it. That is data making a car safer, and it happens before the car is even for sale.</p>
+
+<hr class="section-rule">
+
+<p>Then the car launches, and most of that goes quiet.</p>
+
+<p>The crash tests pass. The validation sign-off gets filed. The program moves on to the next vehicle. The live picture of how each car is actually behaving, the one that caught problems in the validation fleet, mostly gets switched off the day the car becomes someone&rsquo;s daily driver. We treat the launch as the finish line for safety.</p>
+
+<blockquote><p>A car is not finished at launch. It is just getting started.</p></blockquote>
+
+<p>But it isn&rsquo;t. It will spend the next ten or fifteen years getting older, taking on software updates, and meeting roads, weather, and drivers that no lab ever simulated. The conditions that decide whether it stays safe are mostly the ones that show up out there, not the ones we checked in here.</p>
+
+<p>It helps to split a car&rsquo;s safety in two. Some of it is set in metal at the factory and never really changes: the crumple zones, the airbags, the structure that protects people in a crash. You test that once and sign it off (the industry calls it passive, or crash, safety). The rest now lives in the software, the sensors, and the way the car&rsquo;s systems behave, and that part keeps changing for the whole life of the car (this is functional safety, plus the newer question of how a car copes with situations no one designed for, sometimes called performance-limit safety). The first kind you can prove at the factory. The second you cannot crash-test once and forget.</p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/vehicle-safety-doesnt-end-at-the-factory-gate/images/image-02.png" alt="A diagram. Left, Today: a car drives a road from a factory through Build, Test and Ship, and the road ends at a cliff where the watching stops. Right, Continuous: a teal circular loop with stages Monitor, Catch, Diagnose and Improve that a car travels for the life of the car.">
+  <figcaption>Today, safety runs in a line that ends right after the factory. A safe fleet needs the loop that keeps going for the whole life of the car: monitor, catch, diagnose, improve, and around again.</figcaption>
+</figure>
+
+<p>You can see the cost of looking away in how the industry finds out about its problems. It finds out late. By the time something becomes a recall, the car is already on the road and the symptom is already showing. Someone has felt the brakes go soft, or the steering turn heavy, or the screen go dark. The failure almost never starts there. It starts small and quiet, weeks or months earlier. A cooling part begins to wear, and left alone it stresses the part next to it, until a hundred-dollar component takes a thirty-thousand-dollar battery pack down with it. Same root cause, wildly different bill, and the only thing standing between them is when you caught it.</p>
+
+<p>Here is the part that should bother every carmaker. The federal safety regulator, NHTSA, already does a version of this from the outside. It watches warranty claims and customer complaints across the whole market, looking for the statistical shape of a defect before it becomes a campaign. A government agency is doing pattern detection on your cars, with worse data than you have, and it is sometimes the first to notice. The company that built the car, the one that could see every signal coming off it, should not be the last to know.</p>
+
+<hr class="section-rule">
+
+<p>The strange thing is that carmakers already built half of what they need. Over-the-air updates changed the game. A problem that used to mean millions of cars coming back to dealers can now be handled with a software push overnight. That is real progress. But it only runs one way. Sending a fix out is not the same as knowing the car needed it, or that the fix actually worked. Pushing code to the fleet and listening to what the fleet sends back are two different jobs, and most carmakers only do the first. One automaker recently recalled well over a million vehicles for a fault it had already tried to patch over the air more than once, because the update went out but nothing was watching closely enough to confirm it landed.</p>
+
+<blockquote><p>A fix going out is a push. Safety needs a loop.</p></blockquote>
+
+<p>And a loop needs the data coming back.</p>
+
+<p>Which brings the story back to where it started. The same data that makes a car safer in the validation fleet is exactly what can keep it safe for the rest of its life on the road. It is the same instrument. Most carmakers run it hard before launch and switch it off after, right when the car enters the messy real world where most of the risk actually lives. The missing piece is not more crash tests or another sign-off. It is leaving the instrument on, end to end, so the car keeps telling you whether it is still safe and you keep listening.</p>
+
+<p>That missing piece is what we built at TelemetryLab. We work both ends of the same loop: in R&amp;D and the validation fleet, where data catches problems before a car ever ships, and out on the road, where the same loop is built to catch the slow drift toward a failure long before it becomes a recall. Safety is not a side feature for us. It is a core part of the platform, with functional safety checks and continuous fleet monitoring at its center, because watching a car&rsquo;s safety over its whole life is the most valuable thing this kind of data can do.</p>
+
+<p>None of this makes recalls disappear, and no amount of data decides on its own whether a car is safe. People still do that. What the data changes is when they get to decide, and how much they know when they do. It turns safety from a one-time verdict into something you can actually keep watching.</p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/vehicle-safety-doesnt-end-at-the-factory-gate/images/image-03.jpg" alt="A warm illustration of several cars driving toward a bright dawn, with a continuous teal heartbeat line threading all of them, suggesting every vehicle is continuously monitored and kept safe.">
+  <figcaption>The future worth building: every vehicle on the road continuously watched and kept safe, for its whole life, not just to the factory gate.</figcaption>
+</figure>
+
+<p>So maybe the question we have been asking is slightly off. We ask whether we proved the car was safe before it shipped. The better question, the one that fits how cars actually live, is whether we still know it is safe right now. The first has an answer you file and forget. The second you have to keep answering, every day the car is on the road. The data to answer it is already there. We just have to keep listening.</p>
+
+</body>
+</html>
