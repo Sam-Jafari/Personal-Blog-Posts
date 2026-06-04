@@ -21,9 +21,9 @@ Source-of-truth repository for blog posts authored by Sam Jafari. One folder per
 
 ## Publishing to Medium
 
-Each post folder includes an `index.html` with absolute image URLs pointing to this repository's `raw.githubusercontent.com` paths. To publish:
+Each post folder includes an `index.html` with absolute image URLs (`raw.githubusercontent.com`) so images resolve from anywhere. To publish:
 
 1. Open Medium and use **Stories → Import a story**
-2. Paste the raw HTML URL: `https://raw.githubusercontent.com/Sam-Jafari/Personal-Blog-Posts/main/<post-folder>/index.html`
+2. Paste the GitHub **Pages** URL: `https://sam-jafari.github.io/Personal-Blog-Posts/<post-folder>/` — NOT the `raw.githubusercontent.com` URL. Raw URLs fail Medium import because GitHub serves them with a `Content-Security-Policy: sandbox` header; GitHub Pages serves normal headers.
 3. Medium fetches the HTML, parses it, and imports text + images automatically
 4. Review and publish from Medium
