@@ -9,3 +9,8 @@ That gap between what grabs our attention and what we actually want more of is t
 I wrote up what I think the fix looks like. Two parts. The platform shows you the person it thinks you are, the way Facebook once showed me a buried page of everything it had inferred about me. Then you correct it in plain language, which generative AI finally makes possible. YouTube has started down this road with its custom feed prompt. Right now it is a chip on the side of the product. It should be the product.
 
 [Medium link]
+
+## Posted
+
+- Medium: published 2026-09-02, https://samjafari.medium.com/attention-is-not-intention-the-algorithms-portrait-of-us-27f1984b78fa
+- LinkedIn: link post, 2026-09-02, opener used: "Algorithms learned our impulses. Generative AI lets us state our intentions."

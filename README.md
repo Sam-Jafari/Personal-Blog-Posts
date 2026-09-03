@@ -19,7 +19,7 @@ Source-of-truth repository for blog posts authored by Sam Jafari. One folder per
 | Owning My Health Data, With AI as Health Copilot | [`owning-my-health-data-with-ai-as-health-copilot/`](owning-my-health-data-with-ai-as-health-copilot/) | [Medium](https://medium.com/@samjafari/owning-my-health-data-with-ai-as-health-copilot-c14e9cbc9c93) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/owning-my-health-data-with-ai-as-health-copilot/) |
 | Vehicle Safety Doesn't End at the Factory Gate | [`vehicle-safety-doesnt-end-at-the-factory-gate/`](vehicle-safety-doesnt-end-at-the-factory-gate/) | [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/vehicle-safety-doesnt-end-at-the-factory-gate/) |
 | The Fitness Tracker Your Car Never Got | [`the-fitness-tracker-your-car-never-got/`](the-fitness-tracker-your-car-never-got/) | [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/the-fitness-tracker-your-car-never-got/) |
-| Attention Is Not Intention: The Algorithm's Portrait of Us | [`attention-is-not-intention/`](attention-is-not-intention/) | [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/attention-is-not-intention/) |
+| Attention Is Not Intention: The Algorithm's Portrait of Us | [`attention-is-not-intention/`](attention-is-not-intention/) | [Medium](https://samjafari.medium.com/attention-is-not-intention-the-algorithms-portrait-of-us-27f1984b78fa) · [Pages](https://sam-jafari.github.io/Personal-Blog-Posts/attention-is-not-intention/) |
 
 ## Publishing to Medium
 
