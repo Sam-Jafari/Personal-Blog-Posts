@@ -1,0 +1,154 @@
+# A Compromised Vehicle and a Worn One May Look the Same
+
+*Software never had this problem, because it does not wear. Machines do, and an attack, or an AI agent gone rogue, can hide in the wear. Physical AI cybersecurity starts with signal integrity.*
+
+By Sam Jafari
+
+---
+
+![A clay road runs through heat, snow, rain and rough gravel, ending behind a dusty blue car. A person with a laptop connects to the car through a red cable.](images/image-01.jpg)
+
+*The car has been through all of it, and then someone plugged in. Generated illustration.*
+
+A compromised car can look like a car with a bad connection.
+
+In 2022, someone pulled apart the headlight on Ian Tabor's Toyota RAV4. Even Tabor, an automotive cybersecurity researcher, took it for vandalism. After a second incident, the car disappeared. Its diagnostics showed faults across several systems. The investigation led to a theft device hidden in a Bluetooth speaker case, feeding false messages into the car through wiring accessible at the headlight.
+
+Read those codes in a service bay and a wiring fault would be an obvious place to start. The same evidence that sends a mechanic looking for a bad connection can belong to a theft.
+
+Most cybersecurity thinking was built for software, and software does not wear out. Hardware is a completely different beast. Keys, certificates and access controls still matter, but once a machine starts behaving strangely, there is another question: did someone do this, or has the machine just had a hard year?
+
+The signal alone often will not tell you. You need to know what the machine has been through: its wear, its condition and how it has been operated. That context belongs at the heart of cybersecurity for physical AI. And as AI agents take on more of the driving, moving and deciding, the agent itself becomes a suspect. Is the machine doing what it was supposed to do?
+
+## Normal does not stay still
+
+A recent car can have lived a hard life. Desert heat, winter salt, rough roads, heavy loads and hard braking all leave their mark. Its battery holds less energy. Its sensors drift. Its tires wear down, so the wheels turn faster at the same road speed.
+
+Even one drive changes the readings. On a trip in my own Tesla, all four tire pressures rose 6 to 8 percent with nothing repaired or adjusted. Then someone replaces a part or ships a software update, and normal moves again overnight.
+
+I watched this up close at Lucid, where I built the vehicle data platform from the company's early days through the full set of data and AI products. Monitoring had to keep working through changes in software and hardware. A detector that knows last month's machine can misunderstand this month's machine.
+
+That is the difficulty with signal integrity: knowing which readings to trust and what they mean for this machine. An attack can resemble ordinary deterioration. A healthy change can resemble an attack. The machine's history is part of the evidence.
+
+![Three examples of the same observation with an ordinary and a hostile explanation: lost controller communication, disagreement between wheel and GPS speed, and a fleet changing together.](images/image-02.png)
+
+*A wiring fault or injected messages. Tire wear or false GPS. A software update or coordinated manipulation. Each pair can produce a similar observation. Illustrative examples with generated artwork.*
+
+## An alarm needs to know the machine
+
+This is why I do not trust an algorithm that flags anomalies with no idea which machine it is looking at. A fleet average does not tell you that this vehicle has a replaced pump, a hard working life and a software version installed last week. Ignore those differences and you get a smoke alarm that goes off whenever someone cooks.
+
+Even a small false-alarm rate adds up when a check runs repeatedly across thousands of signals and a whole fleet. The people receiving the alarms learn to ignore them.
+
+Adapting to change creates its own problem. Hold normal fixed and ordinary use can take a machine outside it. Let normal follow every change and a slow attack can become part of what the detector accepts. Wear, operating conditions and intrusion have to be considered together. Otherwise, the system is learning changes without understanding them.
+
+![Two illustrative charts: a fixed baseline flags ordinary change, while a moving baseline follows an attacker's gradual manipulation.](images/image-03.png)
+
+*A fixed picture of normal can mistake ordinary change for trouble. A moving one can absorb an attack. Illustration, not measured data.*
+
+## What to ask before you trust a green dashboard
+
+If you run a fleet or build machines, ask three questions:
+
+1. When the system says nothing is wrong, what did it actually check, and when?
+2. Does it know this machine's condition and history, or only the fleet average?
+3. When a part, software version or AI model changes, what happens to its picture of normal?
+
+If nobody can answer those, the green light is telling you less than it seems.
+
+Much of the useful context already sits with quality, warranty and maintenance teams. They ask what has happened to a machine, how it has been used and what has changed. Security needs those answers too. In an August 2026 preprint, a researcher examined a brake-controller update issued under a safety recall and found that "the safety recall remediation was also a security patch."
+
+The machine does not file its problems under our department names. A history that helps explain a warranty claim can also help explain a suspicious reading. Bringing that information together pays off in ordinary operation as well as during an attack.
+
+## Why we built cybersecurity next to warranty
+
+That is how we built TelemetryLab. Our cybersecurity and signal integrity module runs alongside our wear and tear, warranty and part replacement analysis. Security gets the context of what that vehicle has been through, rather than having to start again with an isolated alert.
+
+When a reading changes, the team can investigate it with everything the platform knows about that vehicle: how its signals have drifted, how it has been driven, how it has worn, and its repairs, part changes and warranty claims. The security assessment starts informed, not blind. That is what makes the integration useful. The question of whether the machine is wearing down, being operated differently or being manipulated belongs in the same investigation.
+
+I stream my own Tesla into the platform, and its data shows me why this matters. One field claimed my parked car had traveled more than four million kilometers. Eight signals we read passed automatic checks and still contradicted trusted sources, while useful signals failed those same checks. These contradictions did not establish a fault or an attack in the car. They showed how easily a plausible-looking number can be misread, and how an unavailable reading can be mistaken for a broken sensor.
+
+An attacker gets to hide in that same confusion. Signal integrity is what makes the rest of the analysis worth trusting.
+
+## When the machine has an agent at the controls
+
+Cars are a familiar starting point. The same questions reach into aircraft, whose data pipeline I later led at Archer. They get sharper in machines increasingly operated by AI agents: humanoid robots, delivery robots and autonomous vehicles.
+
+Now the software can choose actions on the way to a goal. Imagine a delivery robot that keeps taking a longer route. A wheel may be wearing out. The load may be heavier. Someone may be feeding it false location data. Or its agent may have misunderstood the destination and be executing the wrong plan perfectly.
+
+A humanoid robot might struggle to move a box because a joint is worn, because the box is heavier than expected, or because its agent has chosen an unsuitable way to lift it. The motors can be healthy in every one of those cases.
+
+The agent itself can go rogue. Researchers at the University of Pennsylvania talked the AI controlling a commercial robot dog into actions it would normally refuse, and got a self-driving model to plan a drive through a crosswalk full of people. Another team planted a hidden behavior in a robot's planner. It handled ordinary jobs normally until a trigger word appeared in its instructions. From the outside, a rogue agent and a worn machine may look the same.
+
+This is a wider job than looking for an outsider. A faulty or rogue agent can use valid credentials and issue valid commands. The machine can carry them out accurately and still do something nobody intended. A valid command is not a guarantee of a sensible action. Nor can you simply ask the agent: its account of what it did comes from the suspect.
+
+Cybersecurity and signal integrity for physical AI have to connect these questions: can we trust the readings, does the behavior make sense for this machine, and is it doing the job it was given? Looking only at the network misses the physical context. Looking only at the hardware misses the decision that sent it in the wrong direction.
+
+The intrusion risk is already concrete. In August 2026, a researcher demonstrated two paths to root access on a Unitree humanoid robot, one beginning over Bluetooth. Unitree has since released a firmware update.
+
+From January 20, 2027, the EU Machinery Regulation requires covered machinery to collect evidence of legitimate and illegitimate software interventions. Machinery that learns and operates with some autonomy must also stay within its defined task and movement space and record the data behind its safety decisions. The regulation asks for the evidence. Making sense of it takes knowing the machine.
+
+The goal is to recognize when a machine has departed from what was intended, and to tell what caused it: an intruder, a faulty or rogue agent, or a physical problem. That is why physical AI cybersecurity belongs alongside the intelligence that already understands how the machine is used and how it wears.
+
+## An attack can become real wear
+
+In a 2017 lab demonstration, researchers changed a setting on one joint of an industrial robot. The arm kept working, but slightly off its path. They also described an attacker repeatedly starting and stopping a motor until its brakes and other components wore out.
+
+That last case cuts through the categories. The wear is real. So is the attack. Sending one team after cybersecurity and another after maintenance does not make them separate problems.
+
+Ian Tabor's fault codes looked like a repair problem. A delivery robot can report a completed job while leaving the package in the wrong place. A robot arm can keep moving while quietly ruining its work. A green dashboard means little if it cannot help explain those differences.
+
+Security built for software never had to ask what a machine has been through. Physical AI cybersecurity does. It needs a picture of the machine that includes its condition, its history and the purpose of its actions. We built cybersecurity and signal integrity into TelemetryLab alongside wear, warranty and part replacement because these are connected questions. As machines take on more decisions themselves, that connection becomes harder to ignore.
+
+---
+
+*TelemetryLab is the intelligence layer for connected vehicles and robotic fleets. If you are dealing with this in your own fleet, I would like to hear how you tell ordinary change, intrusion and an agent getting it wrong apart.*
+
+---
+
+## The technical version
+
+**The theft.** Ken Tindell's account describes CAN injection. The device contained about $10 of components and sent forged messages onto the controller area network (CAN) through accessible wiring. The diagnostics recorded lost communication with the lighting, front camera and hybrid engine controllers. Those codes recorded communication failures; they did not identify who caused them.
+
+**Why normal moves.** These are cyber-physical systems: software and physical machinery affect one another. Battery aging reduces capacity and increases internal resistance. Tire wear changes the rolling radius, affecting the relationship between wheel rotation and road speed. In a study of industrial robot joints, load and temperature produced larger changes in friction than wear did. The researchers also showed that useful wear estimates could be recovered when those effects were accounted for.
+
+![One Tesla drive with four tire-pressure traces. Front left rose from 2.65 to 2.83 bar, front right from 2.45 to 2.65, rear left from 2.60 to 2.80 and rear right from 2.73 to 2.90. The rounded increases are 7, 8, 8 and 6 percent.](images/image-04.png)
+
+*One drive of about 65 minutes. Values are start to peak; the charts share a scale that does not start at zero. Warming is the likely explanation, not a measured cause. Nothing was repaired or adjusted. Readings from my Tesla; the car illustration is generated.*
+
+**The false-alarm math.** Suppose a detector falsely flags one normal reading in every hundred thousand. At ten readings a second, that averages one false flag about every three hours on a single signal. If every flag becomes an alert, the burden across thousands of signals and a fleet grows quickly. This example counts flags; how a system groups and escalates them determines the actual alert burden.
+
+**Learning can become a way in.** A 2021 paper from Purdue and collaborators examined detectors that identify CAN controllers by their electrical fingerprints. Temperature, workload, firmware changes and aging can change those fingerprints. The authors showed how two compromised controllers could poison retraining and then evade detection. This was a particular bus-level defense, not an experiment on cloud telemetry. It illustrates the danger of learning from changes whose cause you have not established. The paper also proposed a defense against the attack.
+
+**What my Tesla showed.** One tire-pressure field often held 6.375 bar, about 92 psi, when no reading was available. Its available values were around 2.55 to 2.83 bar. A separate field we read from the internal network stayed near 3.2 bar for much of the record, then jumped between zero, 3.2 and values as high as 6.4 bar. It never entered the range reported by the tire sensors. The values show why passing an automatic check is not the same as having a trustworthy interpretation. The likely explanation was the way these fields were being read. An odometer field likewise alternated between about 53,500 kilometers and a value above four million.
+
+**Attacks that resemble physical faults.** The 2017 robot study, from Politecnico di Milano, changed one joint's control gain to half its original value. A straight movement deviated by less than 2 millimeters, enough to ruin a workpiece depending on the task. In a separate demonstration, the researchers changed the operator's display to show the motors off while they were on. The repeated-start-and-stop wear scenario was described, not physically run. A real-world example of the diagnostic confusion came from Australia's Maroochy sewage system in 2000: pumps stopped, alarms went quiet and apparent system faults turned out to be deliberate interference. The attack released 800,000 liters of raw sewage into parks, waterways and other locations.
+
+**The agent adds a question about intent.** Physical condition explains what a machine can do and how it responds. The assigned task explains what it should be doing. A healthy drive system does not establish that a delivery went to the right destination.
+
+**Two ways to turn an agent.** In RoboPAIR, presented at ICRA 2025, University of Pennsylvania researchers got past the safety guardrails of three robot systems, often with a 100 percent success rate on the tested tasks. The systems were a wheeled research robot, a commercial robot dog the researchers could reach only through its normal interface, and a self-driving model evaluated on driving footage. For the self-driving model, success meant producing the dangerous plan, not driving a car through it. In MuTRAP, accepted at IROS 2026, Binghamton University researchers planted a backdoor in small task-specific parameters and left the main model untouched. Ordinary tasks still worked; trigger words switched the planner to the attacker's plans, which the team also ran on a real robot arm. OWASP's top ten risks for agentic applications, published in December 2025, open with agent goal hijack and end with rogue agents. Guardrails built into the agent are one more lock: useful, and breakable like the others.
+
+**The limits that matter.** Telemetry can expose changes worth investigating, including some caused by compromise. Replayed readings can look normal because they were genuine when recorded, a problem described in control-security research in 2009. Several signals can share a compromised source, and a machine's history can itself be falsified. An October 2026 preprint reports a simulated lane departure that evaded five intrusion detectors. Investigation can also arrive too late to prevent harm, and automatically stopping a moving machine can create its own danger. Authentication, encryption and access controls remain essential. An unresolved result needs to remain unresolved.
+
+**The test.** On machines and time periods the detector has never seen, does adding operating and maintenance history improve attack detection at a comparable false-alarm rate? Compare it with a capable detector using the available operating conditions. For an agent-operated machine, also test whether the system recognizes behavior that departs from the assigned task, including cases with healthy hardware and authorized commands. That is the test any combined picture should pass.
+
+---
+
+## Sources
+
+- Ken Tindell, "CAN Injection: keyless car theft," Canis Automotive Labs blog, 2023. Ian Tabor's RAV4, the fault codes and the theft device.
+- Ben Gardiner, "S12X Patch Diffing with QBinDiff," August 2026 preprint. Analysis of a brake-controller recall update that also removed security vulnerabilities.
+- Alexander Robey, Zachary Ravichandran, Vijay Kumar, Hamed Hassani and George J. Pappas, RoboPAIR, IEEE International Conference on Robotics and Automation (ICRA), 2025, as described in Penn Engineering, "Penn Engineering Research Discovers Critical Vulnerabilities in AI-Enabled Robots to Increase Safety and Security," October 17, 2024. The robots tested, the bypassed guardrails and the dangerous tasks.
+- Mohaiminul Al Nahian, Zainab Altaweel, David Reitano, Sabbir Ahmed, Shiqi Zhang and Adnan Siraj Rakin, "MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems," accepted at the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026. The hidden trigger behavior, the untouched main model and the robot arm demonstration.
+- Olivier Laflamme, "UniBLEed: Root RCE on Any Unitree G1 Humanoid Robot," August 2026, with a September firmware update note. The demonstrated access paths and the researcher's stated limit on verification of the fix.
+- European Union, Regulation (EU) 2023/1230 on machinery, consolidated text, Annex III, sections 1.1.9 and 1.2.1. The intervention-evidence requirement and, for control systems with self-evolving behavior that operate with varying levels of autonomy, the defined task and movement space and the recording of safety decision data, kept for one year; general application from January 20, 2027.
+- OWASP, "OWASP Top 10 for Agentic Applications for 2026," December 9, 2025. Agent goal hijack and rogue agents.
+- Davide Quarta and colleagues, "An Experimental Security Analysis of an Industrial Robot Controller," IEEE Symposium on Security and Privacy, 2017. The path deviation, separate false-display demonstration and described wear scenario.
+- Marshall Abrams and Joe Weiss, "Malicious Control System Cyber Security Attack Case Study: Maroochy Water Services, Australia," MITRE, 2008. The apparent faults, investigation and spill.
+- Jacqueline Edge and colleagues, "Lithium ion battery degradation: what you need to know," Physical Chemistry Chemical Physics, 2021. Capacity and resistance changes with age.
+- US Patent 9,983,097, "Methods and apparatus for assessing tire health through monitoring effective tire rolling radius," 2018. Tire wear, pressure and rolling radius.
+- André Carvalho Bittencourt and Patrik Axelsson, "Modeling and Experiment Design for Identification of Wear in a Robot Joint Under Load and Temperature Uncertainties Based on Friction Data," IEEE/ASME Transactions on Mechatronics, 2014.
+- Rohit Bhatia and colleagues, "Evading Voltage-Based Intrusion Detection on Automotive CAN," NDSS Symposium, 2021. Fingerprint variation, retraining, the poisoning attack and a proposed defense.
+- Yilin Mo and Bruno Sinopoli, "Secure control against replay attacks," Allerton Conference on Communication, Control and Computing, 2009.
+- Qazi Mairaj ud din, Sidra Ghayour Bhatti and Qadeer Ahmed, "Model-Free Generative Stealthy Attacks on Safety-Critical Vehicle Cyber-Physical Systems," October 2026 preprint. The lane-departure result is from simulation.
+- My own Tesla, readings collected in November 2026. The pressure values come from the recorded data. The fixed and moving baselines are illustrative, and the hero and figure artwork are generated.
